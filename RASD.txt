@@ -3,16 +3,16 @@ Requirements Analysis and Specifications Document
 • Joshua Nicolay Ortiz Osorio 
 • Michelangelo Medori
 
-INTRODUCTION
+1)INTRODUCTION
 This is the first of a series of documents aimed to project a digital management system for a car sharing service. 
 Identifying stakeholders, modelling scenarios and formalizing requirements and constrains of the system are the main topics of this document.
 
-PURPOSE
+1.1)PURPOSE
 
 This  Requirement Analysis and Specification Document (RASD) provides a description of the system in terms of functional and nonfunctional requirements, 
 and its aim is to be means of communication among  the stakeholders . 
 
-DESCRIPTION OF THE GIVEN PROBLEM
+1.2)DESCRIPTION OF THE GIVEN PROBLEM (SCOPE)
 
 We are going to design an information system which is able to manage a car sharing service only made of electric cars (i.e. cars powered by rechargeable batteries), which are environment-friendly and noise-free.
 Precisely, we want to offer the possibility to users to choose a car among an amount of cars dislocated into Milan's urban area, to travel across the city.
@@ -28,11 +28,31 @@ Questo progetto si propone come una rivoluzione che ha inoltre lo scopo di incen
 //
 
 
-ACTUAL SYSTEM
+1.3)ACTUAL SYSTEM
 Actually, there is no such service involving electric cars. Still, similar services that use regular (gas, diesel et al.) cars are to be found in Milan as well as other italian and international cities. 
 
+1.4)STAKEHOLDERS
 
-PURPOSED SYSTEM
+
+1.5)GLOSSARY
+
+
+SAFE AREA: centro urbano di milano
+SAFE PARKING LOT : qualunque parcheggio all'interno della safe area
+SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
+POWER GRID STATION: stazione di ricarica, in cui risiedono degli addetti (assistenza tecnica), sono presenti dei parcheggi e delle prese per ricaricare le macchine
+
+1.6)REFERENCE DOCUMENTS
+
+1.7)OVERVIEW (description of the rest of the document)
+
+
+
+2)OVERALL DESCRIPTION
+
+
+
+2.1) PRODUCT PERSPECTIVE
 
 We want this service to be accessible via mobile or web app. Every user (i.e. person who wants to reserve and ride a car)  must register to the system via the mobile or web app providing general informations (full name, age, sex etc.) and specific ID's (fiscal code, drive license code). 
 Once registered, the system allows user to view on a map the current geographical position of every available car, thanks to GPS sensors on each car. Cars already in use by other users do not display, but the system can access the information about the positions of every single car, weather they are being used or not, any time it needs to (in case of assistance requests et al.).
@@ -41,38 +61,33 @@ When near, users can unlock the car by simply tapping on a button on the mobile 
 The system unlocks the car soon after and the user is able to get in. In order to start the ride, the user has to insert a code onto a screen inside the car. This code is provided by the system after the registration.
 Once the car is started, the user starts to be charged per minute of ride. 
 Before starting the ride, the system encourage the user to make sure the car is not damaged or compromised, and to comunicate it, in case issues are found, via the mobile app or a phone call.
-Once they ended the ride, users can park cars in every available car park inside the urban area (which includes any kind of parking lot, accordingly to italians laws, pay and display car parks included).  
+Once they ended the ride, users can park cars in every available car park inside the urban area (which includes any kind of parking lot, accordingly to italian laws, pay and display car parks included).  
 Some special parking lots are equipped with power grids to recharge the car, and discounts are available in case users take car to plug the car in.
 Discounts are also available in case the user leaves the car with more than 50% battery charge, while the user is going to pay 30% more of the price of his ride in case he leaves the car with 20% battery charge or more than 3 km away from the nearest charging station.
  
-
+//
 L’obiettivo del progetto è quello di creare un sistema che sia disponibile sia sulla piattaforma web che sui normali dispositivi mobili. I clienti per poter usufruire del servizio devono essere registrati nel database. Il sistema attraverso l’uso del GPS o dell’indirizzo inserito manualmente dal cliente provvederà a indicare le macchine più vicine a lui. Le macchine solitamente si troveranno dentro le power grid station oppure sparse all’interno della safe area. Trovata la macchina adatta alle sue esigenze può prenotarla e renderla non disponibile ad altri clienti (la prenotazione dura per una tempo massimo di 60 minuti).L’addebito avviene a fine corsa a seconda del tempo trascorso dall’accensione della macchina e l’importo viene prelevato dal numero di carta prepagata che è stato dato al momento della registrazione.
+//
+
+
+2.1.1) ACTORS IDENTIFYING
 
 
 
-STAKEHOLDERS
+2.2)GOALS (PRODUCT FUNCTIONS)
 
 
-GOALS
-
-
-DOMAIN PROPERTIES
+2.3)DOMAIN PROPERTIES
 
 
 
-GLOSSARY
-
-
-SAFE AREA: centro urbano di milano
-SAFE PARKING LOT : qualunque parcheggio all'interno della safe area
-SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
-POWER GRID STATION: stazione di ricarica, in cui risiedono degli addetti (assistenza tecnica), sono presenti dei parcheggi e delle prese per ricaricare le macchine
-
-
-TEXT ASSUMPTIONS
-
-
-CONSTRAINS
 
 
 
+2.4)TEXT ASSUMPTIONS
+
+
+2.5)CONSTRAINS
+
+
+3) SPECIFIC REQUIREMENTS
