@@ -9,8 +9,7 @@ Identifying stakeholders, modelling scenarios and formalizing requirements and c
 
 1.1)PURPOSE
 
-This  Requirement Analysis and Specification Document (RASD) provides a description of the system in terms of functional and nonfunctional requirements, 
-and its aim is to be means of communication among  the stakeholders . 
+This  Requirement Analysis and Specification Document (RASD) provides a description of the system in terms of functional and nonfunctional requirements, and its aim is to be a clear and non ambiguous  means of communication among the stakeholders. After a short description and analysis of the problem, goals (i.e. the main functions of the system) are identified, analyzed and formalized using UML diagrams (use case diagrams, activity diagrams, state diagrams and class diagrams) and Alloy.   
 
 1.2)DESCRIPTION OF THE GIVEN PROBLEM (SCOPE)
 
@@ -29,14 +28,14 @@ Questo progetto si propone come una rivoluzione che ha inoltre lo scopo di incen
 
 
 1.3)ACTUAL SYSTEM
-Actually, there is no such service involving electric cars. Still, similar services that use regular (gas, diesel et al.) cars are to be found in Milan as well as other italian and international cities. 
+At the moment, there is no such service involving electric cars. Still, similar services that use regular (gas, diesel et al.) cars are to be found in Milan as well as other Italian and international cities. 
 
 1.4)STAKEHOLDERS
 
 
 1.5)GLOSSARY
 
-
+//!
 SAFE AREA: centro urbano di milano
 SAFE PARKING LOT : qualunque parcheggio all'interno della safe area
 SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
