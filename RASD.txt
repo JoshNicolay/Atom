@@ -30,6 +30,22 @@ The final aim of the system is to provide a service within anyone's reach, that 
 
 
 1.4)GLOSSARY
+•	User : every person register in the system that want to use a car.
+•	Not Register User (NRU) : all people not registered in the system.
+•	Operators:  employees working on charging stations whose job is recharge every car that has less 20% battery level and to provide assistance to the users.
+•	Passenger : a person who is travelling in a car without driving it. 
+•	Registration: consist in the act of insert all the needed information into the system as
+o	First name and Last name
+o	E-mail
+o	Password
+o	Phone number
+o	Birth date 
+o	ID card code 
+o	Drive licence code 
+o	Credit card number 
+o	Fiscal code
+
+
 
 //!
 SAFE AREA: centro urbano di milano
