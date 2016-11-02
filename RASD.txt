@@ -3,16 +3,16 @@ Requirements Analysis and Specifications Document
 • Joshua Nicolay Ortiz Osorio 
 • Michelangelo Medori
 
-Introduction
+INTRODUCTION
 This is the first of a series of documents aimed to project a digital management system for a car sharing service. 
 Identifying stakeholders, modelling scenarios and formalizing requirements and constrains of the system are the main topics of this document.
 
-Purpose
+PURPOSE
 
 This  Requirement Analysis and Specification Document (RASD) provides a description of the system in terms of functional and nonfunctional requirements, 
 and its aim is to be means of communication among  the stakeholders . 
 
-Description of the given problem
+DESCRIPTION OF THE GIVEN PROBLEM
 
 We are going to design an information system which is able to manage a car sharing service only made of electric cars (i.e. cars powered by rechargeable batteries), which are environment-friendly and noise-free.
 Precisely, we want to offer the possibility to users to choose a car among an amount of cars dislocated into Milan's urban area, to travel across the city.
@@ -28,10 +28,11 @@ Questo progetto si propone come una rivoluzione che ha inoltre lo scopo di incen
 //
 
 
+ACTUAL SYSTEM
+Actually, there is no such service involving electric cars. Still, similar services that use regular (gas, diesel et al.) cars are to be found in Milan as well as other italian and international cities. 
 
 
-
-Purposed System
+PURPOSED SYSTEM
 
 We want this service to be accessible via mobile or web app. Every user (i.e. person who wants to reserve and ride a car)  must register to the system via the mobile or web app providing general informations (full name, age, sex etc.) and specific ID's (fiscal code, drive license code). 
 Once registered, the system allows user to view on a map the current geographical position of every available car, thanks to GPS sensors on each car. Cars already in use by other users do not display, but the system can access the information about the positions of every single car, weather they are being used or not, any time it needs to (in case of assistance requests et al.).
@@ -49,11 +50,29 @@ L’obiettivo del progetto è quello di creare un sistema che sia disponibile si
 
 
 
+STAKEHOLDERS
 
 
+GOALS
+
+
+DOMAIN PROPERTIES
+
+
+
+GLOSSARY
 
 
 SAFE AREA: centro urbano di milano
 SAFE PARKING LOT : qualunque parcheggio all'interno della safe area
 SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
 POWER GRID STATION: stazione di ricarica, in cui risiedono degli addetti (assistenza tecnica), sono presenti dei parcheggi e delle prese per ricaricare le macchine
+
+
+TEXT ASSUMPTIONS
+
+
+CONSTRAINS
+
+
+
