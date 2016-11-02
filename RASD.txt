@@ -30,20 +30,20 @@ The final aim of the system is to provide a service within anyone's reach, that 
 
 
 1.4)GLOSSARY
-•	User : every person register in the system that want to use a car.
-•	Not Register User (NRU) : all people not registered in the system.
-•	Operators:  employees working on charging stations whose job is recharge every car that has less 20% battery level and to provide assistance to the users.
-•	Passenger : a person who is travelling in a car without driving it. 
-•	Registration: consist in the act of insert all the needed information into the system as
-o	First name and Last name
-o	E-mail
-o	Password
-o	Phone number
-o	Birth date 
-o	ID card code 
-o	Drive licence code 
-o	Credit card number 
-o	Fiscal code
+•	User : every person registered into the system that wants to use a car.
+•	Not Register User (NRU) : all people not registered into the system.
+•	Operators:  employees working on charging stations whose job is recharge 		every car that has less 20% battery level and to provide assistance to the 		users. Operators are registered through a specific section of the system 		which is dedicated to them
+•	Passenger : a person who is traveling in a car without driving it. 
+•	Registration: consist in the act of insert all the needed information into  	the system. These information consist in:
+	o	First name and Last name
+	o	E-mail
+	o	Password
+	o	Phone number
+	o	Birth date 
+	o	ID card code 
+	o	Drive licence code 
+	o	Credit card number 
+	o	Fiscal code
 
 
 
@@ -54,6 +54,8 @@ SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
 POWER GRID STATION: stazione di ricarica, in cui risiedono degli addetti (assistenza tecnica), sono presenti dei parcheggi e delle prese per ricaricare le macchine
 
 1.5)REFERENCE DOCUMENTS
+These are the documents we used as guideline:
+
 
 1.6)OVERVIEW (description of the rest of the document)
 
@@ -82,7 +84,14 @@ Payments are always carried out through the credit card that the user has to ins
 
 
 2.1.1) ACTORS IDENTIFYING
+There are two main kind of people the System needs to interact with:
 
+-Users
+-Operators
+
+Both of them need to be registered into the system.
+Operators work at the charging stations and need to pick up and recharge every car below 20% battery charge and provide assistance to users, if needed.
+The goals concerning these two groups of people are described below.
 
 
 2.2)GOALS (PRODUCT FUNCTIONS)
