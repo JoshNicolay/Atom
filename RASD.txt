@@ -5,7 +5,7 @@ Requirements Analysis and Specifications Document
 
 1)INTRODUCTION
 This is the first of a series of documents aimed to project a digital management system for a car sharing service. 
-Identifying stakeholders, modelling scenarios and formalizing requirements and constrains of the system are the main topics of this document.
+Identifying stakeholders, modeling scenarios and formalizing requirements and constrains of the system are the main topics of this document.
 
 1.1)PURPOSE
 
@@ -13,7 +13,7 @@ This  Requirement Analysis and Specification Document (RASD) provides a descript
 
 1.2)DESCRIPTION OF THE GIVEN PROBLEM (SCOPE)
 
-We are going to design an information system which is able to manage a car sharing service only made of electric cars (i.e. cars powered by rechargeable batteries), which are environment-friendly and noise-free.
+We are going to design a digital management system for a car sharing service that only employs electric cars (i.e. cars powered by rechargeable batteries), which are environment-friendly and noise-free.
 Precisely, we want to offer the possibility to users to choose a car among an amount of cars dislocated into Milan's urban area, to travel across the city.
 Electric cars gather their fuel when they are plugged into proper power grids; these grids are placed all around the city: they can be found into specific charging stations, beyond near a decent number of parking lots around Milan.
 Cars can be parked everywhere inside Milan urban area (i.e. any kind of appropriate car park, accordingly to Italian laws, with pay and display parking being the only exception). 
@@ -27,13 +27,12 @@ Questo progetto si propone come una rivoluzione che ha inoltre lo scopo di incen
 //
 
 
-1.3)ACTUAL SYSTEM
-At the moment, there is no such service involving electric cars. Still, similar services that use regular (gas, diesel et al.) cars are to be found in Milan as well as other Italian and international cities. 
-
-1.4)STAKEHOLDERS
 
 
-1.5)GLOSSARY
+1.3)STAKEHOLDERS
+
+
+1.4)GLOSSARY
 
 //!
 SAFE AREA: centro urbano di milano
@@ -41,9 +40,9 @@ SAFE PARKING LOT : qualunque parcheggio all'interno della safe area
 SPECIAL PARKING LOT: safe parking lot dotato di prese per ricaricare la macchina
 POWER GRID STATION: stazione di ricarica, in cui risiedono degli addetti (assistenza tecnica), sono presenti dei parcheggi e delle prese per ricaricare le macchine
 
-1.6)REFERENCE DOCUMENTS
+1.5)REFERENCE DOCUMENTS
 
-1.7)OVERVIEW (description of the rest of the document)
+1.6)OVERVIEW (description of the rest of the document)
 
 
 
