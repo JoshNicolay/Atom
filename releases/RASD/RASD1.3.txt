@@ -1,0 +1,211 @@
+
+
+Computer Science and Engineering 
+A.A. 2016/2017
+Software Engeneering 2 Project:
+“Power&Joy”
+Requirements Analysis and Specification Document
+November 11, 2016
+
+
+
+Prof. Luca Mottola
+Joshua Nicolay Ortiz Osorio     Matr. 806568 Michelangelo Medori     Matr. 806568
+
+
+
+
+
+
+Contents
+
+1     Introduction............................................................................................................................
+	1.1     Purpose.................................................................................................................... 	1.2     Description of the Given Problem............................................................................ 	1.3     Stakeholders............................................................................................................. 	1.4     Glossary.................................................................................................................... 	1.5     Reference Documents.............................................................................................. 	1.6     Overview..................................................................................................................
+2     Overall Description.................................................................................................................
+2.1     Product Perspective................................................................................................. 2.2     Actors Identifying..................................................................................................... 2.3     Goals (Product Functions)........................................................................................ 2.4     Domain Properties................................................................................................... 2.5     Text Assumptions..................................................................................................... 2.6     Constrains................................................................................................................. 
+3     Specific Requirements.............................................................................................................          
+ 
+
+
+
+
+
+
+
+
+
+1.Introduction   1.1 Purpose
+This is the first of a series of documents aimed to project a digital management system for a car sharing service. Identifying stakeholders, modeling scenarios and formalizing requirements and constrains of the system are the main topics of this document.
+ 1.2 Description of the given problem
+
+We are going to design a digital management system for a car sharing service that only employs electric cars (i.e. cars powered by rechargeable batteries), which are environment-friendly and noise-free. Precisely, we want to offer the possibility to users to choose a car among an amount of cars dislocated into Milan's urban area, to travel across the city. Electric cars gather their fuel when they are plugged into proper power grids; these grids are placed all around the city: they can be found into specific charging stations, beyond near a decent number of parking lots around Milan. Cars can be parked everywhere inside Milan urban area (i.e. any kind of appropriate car park, accordingly to Italian laws, included pay and display parking lots).  Operators are available to make sure that cars are never left with less than 20% battery charge by charging them into near charging stations. The final aim of the system is to provide a service within anyone's reach, that stands for a solid alternative to public transport. 
+1.3 Stakeholders  The only stakeholders that we have is Power&Joy society that require the management system of car sharing. 
+
+1.4 Glossary
+System: is the system we will create which is going to manage the car sharing    service. The system has a dedicated database where it can store and access all needed information
+User : every person register in the system that want to use a car.
+Not Register User (NRU) : all people not registered in the system.
+Operators:  employees working on charging stations whose job is recharge every car that has less 20% battery level and to provide assistance to the users.
+Passenger : a person who is traveling in a car without driving it. 
+Registration: consist in the act of insert all the needed information into the system as
+First name and Last name
+E-mail
+Password
+Phone number
+Birth date 
+ID card code 
+Drive license code 
+Credit card number 
+Fiscal code
+Safe Area: Milan’s urban centre.
+Power grid station: a stopping place for electric cars equipped with electric socket and where operators work.
+Available car: is a car that is not currently used by other users and has the battery charge level over 30%.
+Parking lot: every available car park inside the Safe Area that respect to the Italian traffic laws.
+Special Parking lot: every parking lot equipped with electric socket.
+Safe Zone:  is a circular zone with 3 km of diameter which centre is a power grid station.
+Reservation:  is the ability of reserve a car for at maximum 1 hour, then the reservation expires.
+Contactless  card: card acquired by users at the moment of the registration used to unlock the reserved cars.
+Special contactless card: Magnetic card acquired by operators at the moment of the registration that can be used to unlock any car. 
+Unlock Car:  to undo the lock of car’s doors  by  placing the contactless cards or special contactless cards near specific sensors placed over the car doors.
+Password: is the key to log in to the system. 
+
+Status (of a car): any of the possible conditions of the cars (out of charge/assistance needed/out of safe area/no issues). A car can have more than one status at once. Each status is identified by a color.
+Reserved area: special section of the system where operators can register and log in, and from which they can access information about the position and the status of all the cars.
+Path: 
+Ride: it starts one minute after the unlock car and ends when the user shut down the car and push on the display “end the ride”.
+Pit Stop: it happen when the user stops the car for a short period of time (maximum 60 minutes) and keep  the car reserved in order to continue the ride.
+End the ride: user stops the car, leaving it in a safe parking lot so that the car is made available for other reservations by other users. 
+ 
+1.5 Reference Documents
+These are the documents we used as guideline:
+Specification Document: Assignment AA 2016-2017 (RASD)
+IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications.
+Examples Documents: RASD sample from Oct. 20 lecture. 
+1.6 Overview
+After a short description of the system’s properties, we define goals (e.g. the functions the system has to be able to perform)  and constrains, and make assumptions that we suppose hold in the analyzed world. Then we analyze and formalize the goals with the help of UML diagrams (use case, sequence diagrams, class diagram) and the formal language Alloy.  
+
+2. Overall Description 
+2.1 Product Perspective
+We want this service to be accessible via mobile or web app. Every user (i.e. person who wants to reserve and ride a car)  must register to the system via the mobile or web app providing general information (full name, age, sex, e-mail etc.) and specific ID's (fiscal code, drive license code). Once registered, the system allows user to view on a map the current geographical position of every available car, thanks to GPS sensors on each car. Cars already in use by other users do not display, but the system can access the information about the positions  and the batteries of every single car, weather they are being used or not, any time it needs to (in case of assistance requests et al.).  Users can choose a car at the time, and make a reservation for it. They shall reach the car within 30 minutes from the moment the reservation is made,  to be able to use the car. When near, users can unlock the car by simply placing  their contactless card  (provided at the moment of the registration) near the sensor placed on the car door. The system unlocks the car soon after and the user is able to get in. In order to start the ride, the user simply needs to push a button placed inside the car.  
+Every car is equipped with an on-board computer, that can be used to comunicate the existence of damages over the car and as GPS navigator device.  Before starting the ride, the system encourage the user to make sure the car is not damaged or compromised, and to communicate it, in case issues are found, via the mobile app or the onboard computer.
+Once the car is started, the user starts to be charged per minute of ride. Once they end the ride, users can park cars in every available car park inside the urban area (which includes any kind of parking lot, accordingly to Italian laws, pay and display car parks included, private parking lots excluded).    Some special parking lots are equipped with power grids to recharge the car, and discounts are available in case users take care to plug the car in. Discounts are also available in case the user leaves the car with more than 50% battery charge or if he takes on the ride 2 more passengers , while the user is going to pay 30% more of the price of his ride in case he leaves the car with 20% battery charge or more than 3 km away from the nearest charging station. Payments are always carried out through the credit card that the user has to insert at the moment of the registration and a receipt is available to view with the mobile app or via e-mail.
+A group of operators is available to give assistance to users and to make sure cars are never left under 20% battery charge. Operators work at charging stations and can access all the information about cars positions and batteries. 
+
+
+
+Car Codes Update Position Car Report an Issue Battery Charge Level Reservations Timer Unlock Car     
+ 
+
+
+2.2 Actors Identifying
+There are two main kind of people the System needs to interact with:
+Users
+Operators
+Both of them need to be registered into the system. Operators work at the charging stations and need to pick up and recharge every car below 20% battery charge and provide assistance to users, if needed. The goals concerning  the interaction between these two groups of people and the system are described below.
+
+
+2.3 Goals (Product Functions)  Users:
+The system shall allow users to register via the web or mobile app by inserting all the required information
+The system shall allow users to see the positions of all the available cars on a map
+The system shall allow users to make a reservation for an available car
+ The system shall allow users to unlock the car they reserved
+The system shall allow users to start the ride
+
+The System shall allow users to make a pit stop of maximum 60 minute
+The system shall allow users to end the ride only if the car is parked inside the safe area
+The system shall allow users to communicate if the car they reserved is damaged or issues are found (e.g. dirt, damages, etc.).
+The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which take care of the payment
+
+ The system shall allow operators to register into the reserved area only accessible from the web service 
+
+The system shall allow operators to log into the reserved area  with a password they have chosen at the moment of the registration
+The system shall inform operators about the changes of the status of every car by changing the colors associated to each one and sending notifications only to those operators that work on the nearest charging station
+The system shall allow operators to unlock any car by placing their special contactless card over the sensor of the car
+
+
+
+2.4 Domain Properties 
+1)The contact-less card is received by users not later than 3 days after the registration is performed.
+
+2)Parking a car where is not allowed by the traffic laws is subject to penalties for the user that parked it, according to italian laws.
+
+3)Damages found on the cars are paid by the last user before the one who signals the found damages
+2.5 Text Assumptions
+1)There are no identical fiscal codes or license numbers related to different users
+2)The credit card inserted at the moment of the registration by the user is a valid (existing and working) one.
+3)Users only register into the system once.
+4)The user who unlocks the car is the owner of the contact-less card he uses and is the same who is actually going to drive it.
+5)Cars are equipped with GPS sensors in order to be localized from the system.
+6)Cars are equipped with pressure sensors on every seat, in order to let the system know exactly how many passengers are onto the car anytime.
+
+7)Users start the ride after at maximum 1 minute after they unlock the cars
+8)Users will not leave the car in a zone where is not possible to detect the GPS sensor, even if it is inside the safe area.
+9)Users do not leave cars into private parking lots.
+10)User will not perform any kind of maintenance or reparation operations to the car 
+11)User will not  leave the car in any kind of condition which could cause damage or any  issue on the surrounding area.
+12)//Users will not try to leave cars outside the safe area.
+13)Users will always leave the car with the windows closed, handbrake activated, lights  and radio off and all the documents stored in their right place  at the end of every ride.
+
+14)Users will always instantly receive, after they end a ride, the information about the ride itself via e-mail and the mobile app. These information include time and money  spent, distance traveled , etc.
+15)All the payments are correctly performed at the end of every ride
+16)Operators are registered into the system and all their data is stored onto the database; The information inserted by operators at the moment of the registration is always consistent.
+17)Operators have a special section of the system where they can log and access all the information they need to perform their job. They can log using a password chosen during the registration
+18)Operators are always available to pick up calls from users who need assistance 
+19)Operators have a special contact-less card they can use to unlock the cars, acquired at the moment of the registration into the system 
+20)In case users leave any kind of items into the cars after ending the ride, they can inform operators about that via a phone call, and operators will pick their stuff; users will collect it in one of the charging station.
+2.6 Constrains 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Specific Requirements
+
+3.1 Functional Requirements
+
+The system shall allow users to register via the web or mobile app by inserting all the required information - The system require to insert all personal information that consist in :  First name and Last name E-mail Password Phone number Birth date  ID card code  Drive license code  Credit card number  Fiscal code - The system shall check that all information inserted are valid (e.g. all text boxes must be not empty, the name can not contain numbers etc.) -The system include the information of the new user onto the database - The system sends a confirmation email to the new user    
+The system shall allow users to see the positions of all the available cars on a map.  - The car are equipped with a GPS sensors that allow the system to localize them anytime - The system shall display all the cars positions on a map that can be visualized by users via the web or mobile application.
+	-The user shall be able to insert a specific address or geographical position, in or	der for the system to show the available cars around the wanted location.
+	-The system shall allow users to view all the positions of the cars which are strict	ly placed around users current position by simply tapping a button on the app. 	This is only possible if GPS sensor are working on the device the user is utilizing to 	view the map.  
+The system shall allow users to make a reservation for an available car - When the user finds a suitable car, he can reserve it by selecting it and clicking on the “RESERVE CAR” button on the application. - Once the user taps on the "RESERVE CAR” button, the system shall make the car unavailable to other users and start a timer of 60 minutes.  If the user is not able to unlock  the reserved car before the time expires, the system cancels the reservation making the car available again for other users  
+ The system shall allow users to unlock the car. -Any  reserved car can only be unlocked using the contactless card owned by the user that reserved that specific car, and before the timer of 60 minutes expires. - When the user places the contactless card near the sensor of the car, the system shall acquire information about the card, verify that it corresponds to the user that actually reserved that car and, in that case, the system shall unlock the car in order for the user to get in. -In case the contactless card is not recognized as valid by the system, the system shall  deny access to the car, until a valid card is recognized by the time the timer expires.
+The system shall allow users to communicate if the car they reserved is damaged or issues are found (e.g. dirt, damages, etc.).-Before starting the engine the system shall remind the user through the on-board computer to check  for damages on the car and to communicate it in case issues are found via the mobile  app or the same onboard computer -In case of issues, the system shall cancel the reservation , make the car unavailable for users, marking it as “RED" and inform the nearest operators
+
+	
+
+
+The system shall allow users to start the ride: In order to start the engine the user shall press a physical button “START THE RIDE”  placed inside the car— The system shall start to charge the user by minute of ride as soon as he ignites the car engine. -The system shall display on the onboard computer the updated amount of money spent for the ride.- If the users wants to, the system shall compute the shortest path from the user’s current position to the final destination of the ride and display it on the onboard computer.  
+  
+The System shall allow users to make a pit stop of maximum 60 minute - The system shall allow users to make a pit stop of maximum 60 minutes communicating it tapping a button “START PIT STOP” on the onboard computer. When they do it, the system starts a timer of 60 minutes - When the user wants to end the pit stop he needs to tap again a button “RESTART THE RIDE” on the onboard computer, or simply restarting the car - During the pit stop the system shall still go on charging users for 50% of the price during all the time the pit stop lasts or since the timer expires -During the pit stop the system shall always make the car stay reserved for the current user, and unavailable to other users. -When the Timer expires the system cancels the reservation for that car, making it available for other users to use.  
+The system shall allow users to end the ride only if the car is parked inside the safe area - When the user wants to end the ride, he has to comunicate it to the system by tapping a button “END THE RIDE” on the onboard computer - The system shall check if the car is parked inside the safe area using the GPS sensor information, and only in that case  allow user to end the ride, stopping charging the user. - If the car is not parked into a safe area, the system shall go on charging users until they move the car inside the safe area  and tap the button “END THE RIDE” on the onboard computer. - The button “END THE RIDE” shall  only be available to press if the car engine is shut down.  
+  
+The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which takes care of the payment -  When a ride ends (if the users taps the “END THE RIDE “ button while the car is parked inside the safe area ,or if  the pit stop timer of 60 minutes expires) the system shall compute the total cost of the ride using the price currently displayed on the on-board computer and taking into account the following rules:  a) If the system detects the user took at least two other passengers onto the car, the system applies a discount of 10% on the last ride.  
+	.	b)  If a car is left with no more than 50% of the battery empty, the system applies a discount of 20% on the ride.  
+	.	c)  If a car is left plugged into on of the power grids available, the system applies a discount of 30% on the last ride.  
+	.	d)  If a car is left at more than 3 KM from the nearest power grid station or with more than 80% of the battery empty, the system charges 30% more on the  ride. 
+
+
+
+  
+The system shall inform operators about the changes of the status of every car by changing the colors associated to each one and sending notifications only to those operators that work on the nearest charging station - Once they are logged in , the system shall allow operators to view (via the mobile app) the positions of all the cars on a list enlightening those rows that correspond to cars that need assistance (i.e. need to be recharged or repaired ) with the use of colors: GREEN is for charged (or currently on charge) and working car, YELLOW is for cars under 20% battery charge, RED is for cars that need some kind of maintenance or reparations. BLACK is for cars under 20% battery charge that also need some kind of maintenance or reparation, BLUE is for cars currently placed outside the safe area, PURPLE is for cars that other operators are already taking care of. - When issues are found on a car and communicated to the system by users, the system shall send notifications to all operators via e-mail and the mobile app, and change the color of the corresponding row on the list.-
+
+Operators shall select a car from the list and be able to take care of it. -Operators shall be able to comunicate to the system they are taking care of a car by selecting a row on the list and tapping a button “OPERATE”. When this happens, the system shall mark that row as PURPLE. Once issues are resolved for a specific car (which is currently marked as purple), operators shall be able to comunicate it to the system by tapping a “ISSUES RESOLVED” button (only available for cars marked on PURPLE). The system shall then mark the car GREEN again.
+
+  
+
+

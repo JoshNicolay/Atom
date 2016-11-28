@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+
+
+\begin{document}
+
+  \includegraphics[width=10cm, height=5cm]{logo} \break \break
+
+\centering {\textbf{Computer Science and Engineering} \\
+
+ A.A. 2016/2017 \\
+Software Engineering 2 Project: \\
+
+\textbf{ Power\&Joy} \break
+
+
+
+\textbf{\large{Requirements Analysis and Specification Document}} \break \break
+
+November 11, 2016 \break
+}
+
+
+
+
+\begin{flushright}
+
+
+Prof. Luca Mottola\break 
+Joshua Nicolay Ortiz Osorio \ Mat: 806568 \\
+Michelangelo Medori \ Matr: 878025
+
+\end{flushright}
+
+  
+  \newpage
+  \pagenumbering{arabic}
+  
+  \centering {\textbf{Index}} \\
+\begin{enumerate}
+
+\item Introduction
+
+
+
+
+\begin {enumerate}
+\item [1.1] Purpose
+\item [1.2] Descriprtion of the given problem
+\item [1.3] Stakeholders
+\item [1.4] Glossary
+\item [1.5] Reference documents
+\item [1.6] Overview
+\end{enumerate}
+
+\item Ovrall Description
+\begin {enumerate}
+\item [2.1] Product Perspective
+\item [2.2] Actors Identifying
+\item [2.3] Goals (Product Functions)
+\item [2.4] Domain Properties
+\item [2.5] Text Assumprtions
+\item [2.6] Constrains 
+\end {enumerate} 
+
+
+\item Specific Requirements
+\begin {enumerate}
+\item [3.1]  Functional Requirements
+\item [3.2] Non Functional Requirements
+\item [3.3] Mockups
+
+\end {enumerate} 
+
+
+\item UML Models
+\begin {enumerate}
+\item [4.1] Use case Diagram
+\item [4.2] Activity Diagrams
+\item [4.3] Class Diagrams
+\item [4.4] State Diagrams
+\item [4.5] Sequence Diagrams
+
+\end {enumerate} 
+
+
+\item Alloy
+\begin {enumerate}
+\item [5.1] Model  
+\item [5.2] World Generated
+
+\end {enumerate} 
+
+
+\item Other Features
+\begin {enumerate}
+\item [6.1] Future Development
+\item [6.2] Used Tools
+\item [6.3] Hours of Work
+
+\end {enumerate} 
+
+\end{enumerate}
+
+\newpage   % 1)INTRODUCTION
+  
+  \section{Introduction}
+
+
+\subsection{Purpose}%1.1) PURPOSE
+
+The purpose of this document is to provide a detailed functional description of the Power{ampersand}Joy car sharing management system. It is aimed at developers, and contains all the information about the architectural and design choices made, which include design patterns, the identification of the main components and the interaction among them, and the system's Runtime behavior.   
+  
+\subsection{Scope} %1.2) SCOPE
+The management system for the  Power{ampersand}Joy electric car sharing service has two different targets of people: users and operators. 
+Both of them can register and log into the system via mobile or web app (the registration and login are different for users and operators, but they are accessible via the same web AND mobile app). 
+The system allows users to view on a map the position of all the available cars placed inside the safe area, to search for cars  near a specific area, reserve a car and ride it (a user can only ride a car he reserved, and only if he manages to unlock it within an hour by the moment the reservation was made). In case a car has some kind of issues users can communicate it to the system via an on-board computer placed inside every car. The system allows users to make a pit-stop of maximum 60 minutes. In case of accident, users can report it to an operator starting a call from the on-board computer, in order to receive assistance.
+The system allows operators to view a list of all the cars, providing their current position , battery charge, and status. The status of a car tells weather it is functional or not, and in the latter case, describes the kind of issues (accident/lowBattery/AssistanceNeeded) affecting that car. Operators' job is to resolve any kind of issue on those cars that need it and provide assistance to users involved in accidents. Operators can inform the system they are taking care of an issued car clicking on a button available on the row of the list associated to an issued car. The system manages to allow only a single operator to take care of a specific car, by hiding the corresponding button to all operators once an operator pressed it, and informing everyone about which cars are already being taken care of. An operator who took care of a car, can inform the system that he has finished his job clicking on a dedicated button on the same list. Cars with no issues are listed as well.
+
+\subsection{Definitiona, acronyms} %1.3) DEFINITIONS
+
+\subsection{Reference Documents} %1.4) REFERENCE DOCUMENTS
+
+\subsection{Document Structure} %1.5) DOCUMENT STRUCTURE
+\begin{description}
+\item [Introduction:] this section introduces the design document. It contains a justification of his utility and indications on which parts are covered in this document that are not covered by RASD. 
+\item  [Architecture Design ]  This section id divided into several parts:
+\begin {enumerate}
+\item  Overview : in this section is explained the architecture of our system in terms of layers and tiers
+\item High level components and their interaction : this section gives a global view of the components of the system and how they ?interact with each other
+\item Component view : this section gives a more detailed view of the ?components of the system
+\item Deploying view : this section shows how the components must be ?deployed to have the application running correctly. 
+\item Runtime view : sequence diagrams are represented in this section to ?show the flow of events in terms of interaction among the components
+\item Component interfaces :in this section are ?presented the interfaces among the components .
+\item Selected architectural styles and patterns : this section explain the ?architectural choices taken during the creation of the application and the proposed design patterns 
+\item Other design decisions 
+\end{enumerate}
+\item  [Algorithms Design:] this section describes the most critical parts via some algorithms. Pseudo code is used in order to hide unnecessary implementation details in order to focus on the most important parts.
+\item  [User Interface Design:] this section presents user experience explained via UX and BCE diagrams. 
+\item  [Requirements Traceability:] this section aims to explain how the decisions taken in the RASD are linked to design elements.
+\end{description}
+
+\section{Architecture Design}  %2)ARCHITECTURE DESING
+\subsection{Overview}  %2.1) OVERVIEW
+\subsection{Component View} %2.2)COMPONENT VIEW
+\subsubsection{High Level Component View}  %2.2.1) HIGH LEVEL COMPONENTS
+The figure below shows the main high level components of the application and the interaction among them. The nexus is where the core of the application is allocated, which contains all the business logics. It needs to communicate with several other components as follows.
+\begin {itemize}
+\item The User can establish a connection with the nexus via the mobile app and web browser logging in and requesting the information about the cars he can reserve. This is a synchronous communication, since the user needs to wait the response from the nexus, before going on asking for a car reservation, etc. 
+\item The operators can establish an asynchronous communication with the nexus in order to take care of cars: they can request to the nexus the list of cars and their information logging in, and, once the nexus provided it to them, they can choose a car to take care of and click on the "Operate" button associate to that car, so that the nexus can update the list, and the same when the issue is resolved.
+\item he nexus always needs to maintain the information on the lists provided to the operators updated in real time: in order to do that it needs an asynchronous communication  with the operators.
+\item The on board computer of the cars has an asynchronous communication with the nexus, in order to provide updated information about the status of all the cars.
+\item The on-board computer also needs to establish a synchronous communication with the nexus  when users want to unlock the cars they reserved, start and end their ride
+\item The nexus also needs to store and access all the information about users, operators, rides, cars positions and status on the database
+\end{itemize}
+
+\subsubsection{Deployment View}  %2.3) DEPLOYMENT
+\subsubsection{Runtime View} %2.4) RUNTIME
+\subsubsection{Component Interfaces} %2.5) INTERFACES
+\subsubsection{Selected Architectural Styles and Patterns} %2.6) SSASP 
+\subsubsection{Other Design Decisions} %2.7) ODD
+
+\section{Algorithm Design} %3) ALGORITHM
+\section{User Interface Design} %4) UX
+\section{Requirement Traceability} %5) REQ TRACEABILITY
+\section{Effort Spent} %6) EFFORT SPENT
+\section{References} %7) REFERENCES
+
+
+\end{document}
