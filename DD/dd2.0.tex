@@ -173,7 +173,7 @@ The Power\&Joy has a three tier architecture.
 \textbf{Mapping between layers and tiers}
 \begin{description}
 \item PRESENTATION TIER: consists on the web browser, the mobile app and the on-board computers of the cars. These are light clients, which only correspond to the presentation layers. The web browser and mobile app communicate to the web server, sending HTTP/S requests and receiving the HTML, CSS, JAVASCRIPT responses;  they need to get through a firewall in order to enhance security. The on-board computers directly communicate with the application server, since the security is already granted by the card ID recognition, at the moment when the car is unlocked.
-\item APPLICATION TIER: consists on a web server and an application server; the web server (Apache HTTP server) processes the HTTP/S requests coming from the clients, elaborates the web pages and generates dynamic contents. The application server contains all the business logics. it receives it's inputs from the web server and the onboard computers, and does all the needed computation in order to generate the dynamic pages and  provide them 
+\item APPLICATION TIER: consists on a web server and an application server; the web server (Apache HTTP server) processes the HTTP/S requests coming from the clients, elaborates the web pages and generates dynamic contents. The application server contains all the business logics. It receives its inputs from the web server and the on-board computers, and does all the needed computation in order to generate the dynamic pages and  provide them 
 to the clients. It can communicate to the Oracle database. There is a firewall between the web server and the application server.
 \item DATA TIER:  it consists on the database, which contains all the needed information about users, cars, reservations, operators et al. , which can be accessed by the application server via sql queries.
 
@@ -249,9 +249,9 @@ The nexus is where the core of the application is allocated, which contains all 
 \newpage
 \textbf{Sequence Diagram 1: Operator Login}
 \break
-The above diagram shows how an operator can log into the system. In order to do that, he has to be registered first. The operator accesses the login page from his mobile app and inputs his credentials (a username and a password). The mobile app transfers this request to the operator controller, that checks that there is a tuple corresponding to that operator into the database. If there is one, than the operator controller sets the answer to ''true'' only if the password that the operator inserted matches with the one saved on the tuple. The mobile app receives the answer and shows the operator home page only if the answer is true. Otherwise it shows an instance of error1 (inserted credentials not valid). \\
+The above diagram shows how an operator can log into the system. In order to do that, he has to be registered first. The operator accesses the login page from his mobile app and inputs his credentials (an ID and a password). The mobile app transfers this request to the operator controller, that checks that there is a tuple corresponding to that operator into the database. If there is one, then the operator controller sets the answer to ''true'' only if the password that the operator inserted matches with the one saved on the tuple. The mobile app receives the answer and shows the operator home page only if the answer is true. Otherwise it shows an instance of error1 (inserted credentials not valid). \\
 The router that appears as an actor sums up the actual device which takes care to send the request through the network to the application server and the connection controller, that receives the request and pushes it to the right controller component in the application.\\
-The logging via the web browser is analogous to the one via mobile app.\\
+The log in (as well as all other operations) via the web browser is analogous to the one via mobile app.\\
 Log in for the users involves the same operations, with the User Controller instead of the Operator one.
 
 
@@ -265,8 +265,8 @@ The above diagram shows the actions performed in order to let a user reserve a c
 The user has to be registered and have successfully inserted his credentials to log in. Once he submits them (assuming they have been already checked as valid) , the mobile app sends a request to show the map to localize the cars. This request arrives to the Reservation Controller, that first needs to check if the user has already an ongoing reservation or ride. It interrogates the database, and sets the answer to a value that distinguishes the following three cases:
 \begin{enumerate}
 \item A valid reservation tuple (which means one associated to a reservation which is not expired yet) associated to the user is found; Then answer is set to ''1'', and the user is redirected to the reservation page corresponding to the reservation he already performed
-\item A ride tuple associated to the user is found: this means that the user is already performing a ride; Then the answer is set to ''-1'' and an instance of error2 (already on a ride) is showed and the user is not redirected anywhere.
-\item Neither a valid reservation or ride associated to the user is found; Then the answer is set to 0, and the mobile app shows the map with the cars . 
+\item A ride tuple associated to the user is found: this means that the user is already performing a ride; then the answer is set to ''-1'' and an instance of error2 (already on a ride) is showed and the user is not redirected anywhere until the ride ends.
+\item Neither a valid reservation or ride associated to the user is found; then the answer is set to 0, and the mobile app shows the map with the cars . 
 \end{enumerate} 
 The third case is further exploited, in order to show how a user can actually reserve a car; he selects a car, and the app shows the reservation button; the user taps on that button and a request of a new reservation is sent to the reservation controller, which creates a new instance of reservation and updates the database. The user is then redirected to the reservation page, where he can see all the reservation details such as the carID, the timer, the car position ecc.
 
@@ -276,22 +276,22 @@ The third case is further exploited, in order to show how a user can actually re
 \newpage
 \textbf{Sequence Diagram 3: User starts a ride}
 \break
-We already said back in RASD how the car should be provided with an appropriate system of its own, which means it has to be equipped with all the needed sensors and actuators communicating with the on-board computer, which can send requests to the application server in order to perform all the operations to let the user ride the car.\\
+We already said, back in RASD, how the car should be provided with an appropriate system of its own, which means it has to be equipped with all the needed sensors and actuators communicating with the on-board computer, which can send requests to the application server in order to perform all the operations to let the user ride the car.\\
 The above diagram describes the start of the ride, which is requested by the user by placing its contact-less card on the door sensor. Then a request is sent to the Ride controller, that checks that the user has a valid on-going reservation. The answer is set to ''true''only if a valid tuple is found and the carID on the reservation tuple matcher the one of the car that the user is trying to unlock. If that happens, the doors are unlocked, otherwise, a red light is shown and the doors remain locked.
-If the user manages to correctly unlock the car and starting the ride tapping on the ''START RIDE'' button on the on-board computer, then the ride controller updates the database removing the reservation tuple and adding a ride one, and creates a new instance of ride. Once these operations are correctly performed, the on-board computer starts the timer, to store the information about the ride length, which is then sent to the application server (once the ride is terminated, which is not shown in the diagram) to perform the payment 
+If the user manages to correctly unlock the car and starting the ride tapping on the ''START RIDE'' button on the on-board computer, then the ride controller updates the database removing the reservation tuple and adding a ride one, and creates a new instance of ride. Once these operations are correctly performed, the on-board computer starts the timer, to store the information about the ride length, which is then sent to the application server (once the ride terminates, which is not shown in the diagram) to perform the payment 
 
 \newpage
 \includegraphics[scale=0.25]{seq4_accident} 
 \newpage
-\textbf{Sequence Diagram 4: Accident|}
+\textbf{Sequence Diagram 4: Accident}
 \break
-The above diagram shows the actions performed in case an accident occurs. It is signaled by the user tapping a dedicated button on the on-board computer. It then sends a request to the ride controller, which terminates the ride. It stops charging the user and deletes the ride tuple on the database, but saves locally the information about the ride itself in order to lately perform the payment. It also sends a request to the issue controller, which creates an instance of accident and updates the car status on the database, in order to let all the operators know about what happened. Once all these operations have been correctly performed, the onboard computer makes a call to an operator, which acquires the accident details from the user. Once he is satisfied, he accesses its home page (logging in as described in Sequence Diagram 1) requesting the updated list to the operator controller, and looks for the row on the list corresponding to the car involved in the accident. He then taps on the ''OPERATE'' button, and the mobile app creates an instance of operation and sends a request to the operator controller in order to update the car statuses informing all other operators that that issue is already being taken care of. Once the operator provided assistance to the user, he informs the operator controller tapping on the ''ISSUE SOLVED'' button. The operator controller updates the car tuple once again and informs the issue controller that the issue has been solved. The issue manager deletes the accident instance, and the operator mobile app deletes the operation instance.
+The above diagram shows the actions performed in case an accident occurs. It is signaled by the user tapping a dedicated button on the on-board computer. The on-board computer then sends a request to the ride controller, which terminates the ride. It stops charging the user and deletes the ride tuple on the database, but saves locally the information about the ride itself in order to lately perform the payment. It also sends a request to the issue controller, which creates an instance of accident and updates the car status on the database, in order to let all the operators know about what happened. Once all these operations have been correctly performed, the on-board computer makes a call to an operator, which acquires the accident details from the user. Once he is satisfied, he accesses its home page (logging in as described in Sequence Diagram 1) requesting the updated list to the operator controller, and looks for the row on the list corresponding to the car involved in the accident. He then taps on the ''OPERATE'' button, and the mobile app creates an instance of operation and sends a request to the operator controller in order to update the car status informing all other operators that issue is already being taken care of. Once the operator provided assistance to the user, he informs the operator controller tapping on the ''ISSUE SOLVED'' button. The operator controller updates the car tuple once again and informs the issue controller that the issue has been solved. The issue manager deletes the accident instance, and the operator mobile app deletes the operation instance.
 
 
 \newpage
 
 \subsection{Component Interfaces} %2.5) INTERFACES
-\includegraphics[scale=0.25]{interface} 
+\includegraphics[scale=0.7]{interface} 
 
 \subsection{Selected Architectural Styles and Patterns} %2.6) SSASP 
 \subsubsection{Overall Architecture}
@@ -525,7 +525,7 @@ public ArrayList<Ride> rideArray = new ArrayList<Ride>();
 
 \section{User Interface Design} %4) UX
 \subsection{Mockups}%4.1) MOCKUPS
-We have already done mockups in RASD in section 3.2.1 and 3.2.2\break
+We have already done mockups in RASD in section 3.3\break
 \newpage
 \subsection{UX diagrams} %4.2) UX
 The following UX diagrams show the main interactions between the system and the users and operators\break
