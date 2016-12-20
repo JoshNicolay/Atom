@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  20 DEC 2016 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  20 DEC 2016 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**RASD3.0.tex
-(./RASD3.0.tex
+**RASD4.0.tex
+(./RASD4.0.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -88,8 +88,9 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \NC@list=\toks16
 \extratabsurround=\skip43
 \backup@length=\skip44
-) (./RASD3.0.aux)
-\openout1 = `RASD3.0.aux'.
+)
+No file RASD4.0.aux.
+\openout1 = `RASD4.0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -103,7 +104,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
@@ -615,10 +615,10 @@ Overfull \hbox (24.89319pt too wide) in paragraph at lines 1164--1165
 Overfull \vbox (36.5079pt too high) has occurred while \output is active []
 
 
-[46 <./images/world.png>] [47] [48] (./RASD3.0.aux) ) 
+[46 <./images/world.png>] [47] [48] (./RASD4.0.aux) ) 
 Here is how much of TeX's memory you used:
- 2876 strings out of 493014
- 42437 string characters out of 6133350
+ 2874 strings out of 493014
+ 42413 string characters out of 6133350
  129215 words of memory out of 5000000
  6386 multiletter control sequences out of 15000+600000
  5158 words of font info for 19 fonts, out of 8000000 for 9000
@@ -630,7 +630,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on RASD3.0.pdf (48 pages, 1671347 bytes).
+Output written on RASD4.0.pdf (48 pages, 1671347 bytes).
 PDF statistics:
  229 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
