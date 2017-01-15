@@ -101,39 +101,44 @@ Michelangelo Medori \ Matr: 878025
     \textbf{Version} &  \textbf{Date} & \textbf{Author(s)} & \textbf{Summary}  \\ 
     \hline
     
-    1.0 & 10/01/2017 & Josh and Mic & first version of the doc
+    1.0 & 10/01/2017 & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & initial release
      \\ 
   \hline
+  
+  
+  2.0 & 14/01/2017 & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & completed sections 5 and 6, small changes to section 3\\
+  \hline
+  
     \end{tabular}
 \end{center}
 	
   \subsection{Purpose and Scope}		% 1.2)PURPOSE AND SCOPE
   This is the  Integration Testing Plan Document for the Power\&Joy car sharing management system.
-  The purpose of this document is to describe in a detailed way the organization of the integration test activity, which involves all the components that are going to be assembled to build the system\\
-  In the following sections we?re going to provide:\\
+  The purpose of this document is to describe in a detailed way the organisation of the integration test activity, which involves all the components that are going to be assembled to build the system\\
+  In the following sections we are going to provide:\\
   \begin{itemize}
      \item In section 2.1 we describe the criteria that must be met by the project status before integration testing of the outlined elements may begin
   
-  \item In section 2.2 we provide a list of the subsystems and their subcomponents involved in the integration activity that will  be tested
+  \item In section 2.2 we provide a list of the subsystems and their subcomponents involved in the integration testing  activity 
 
     \item  In section 2.3 we provide a description of the integration testing approach
      \item The sequence in which components and subsystems will be integrated is described in sections 2.4.1 and 2.4.2
       \item  Section 3 contains a description of the planned testing activities for each integration step, including their input data and the expected output
-       \item  A list of all the tools that will have to be employed during the testing activities, together with a description of the operational environment in which the tests will be executed can b found in section 4 and 5
+       \item  A list of all the tools that will have to be employed during the testing activities, together with a description of the operational environment in which the tests will be executed can be found in section 4 and 5
        
   \end{itemize}
   
   
-  \subsection{List of Definitions and Abbreviations }		% 1.3)LIST OF DEFINITIONS AND ABBREVATIONS
+  \subsection{List of Definitions and Abreviations }		% 1.3)LIST OF DEFINITIONS AND ABREVATIONS
   \subsubsection{Definitions}
   \begin{itemize}
-  \item Subcomponent: each of the low level components realizing the functionalities of a subsystem.
+  \item Subcomponent: each of the low level components realising the functionalities of a subsystem.
   \item Subsystem: a high-level functional unit of the system.
   \end{itemize}
   
   \subsubsection{Acronyms}
     \begin{itemize}
-  \item RASD : Requirements analisys and Specifications Document
+  \item RASD : Requirements Analysis and Specifications Document
   
   \item DD: Design Document
   \item ITPD:  Integration Test Plan Document
@@ -142,10 +147,13 @@ Michelangelo Medori \ Matr: 878025
   \item UI: User Interface
   \item Notification system: a combination of software and hardware that provides a means of delivering a message to a set of recipients
   \item User : someone who registered into the system and can can access the system in order to reserve and ride a car  
-  \item Operator: Someone who provides assistance to users, works in any station
+  \item Operator: Someone who provides assistance to users, works in one of the stations
   \item Station: place where operators work
-  \item 
-  \item 
+  \item CarId: Unique identifier for every car
+  \item ReservationId: Unique identifier for every Reservation 
+  \item RideId: Unique identifier for every Ride
+  \item UserId: Unique identifier for every User
+  \item OperatorId: Unique identifier for every Operator
   
   \end{itemize}
   
@@ -154,7 +162,7 @@ Michelangelo Medori \ Matr: 878025
   \subsection{List of Reference Documents}		% 1.4)LIST OF REFERENCE DOCUMENTS
   \begin{itemize}
    \item Assignment AA 2016-2017
-    \item Requirements analisys and Specifications Document (RASD)
+    \item Requirements analysis and Specifications Document (RASD)
      \item design Document (DD)
       \item Integration Test Plan Example.pdf
       \item Integration testing example document.pdf
@@ -201,28 +209,28 @@ Michelangelo Medori \ Matr: 878025
    \item Issues management 
    \end{itemize}
    
-   These subcomponents strongly rely on each other, and their precise integration is necessary to build all the functionalities the Power\&Joy management system. 
+   These subcomponents strongly rely on each other, and their precise integration is necessary to build all the functionalities the Car sharing management system. 
    
    The account management and system administration subsystems, are two collections of subcomponents that do not interact with each other, but their functionalities fall under the same field. The subcomponents constituting these subsystems are the following:
    For the Administration subsystem:
    \begin{itemize}
    \item The operator management 
-   \item the Station location 
-   \item the service statistics 
+   \item The Station location 
+   \item The service statistics 
    \item Discounts\&penalities management 
    \item Payment management
    \end{itemize}
    
    The account management subsystem takes care both of the users and the operators accounts, registrations and logins, and it is made by the following subcomponents::
    \begin {itemize}
-   \item the Login management
-   \item the password retrieval management
-   \item the registration management 
-   \item the settings management 
+   \item The Login management
+   \item The password retrieval management
+   \item The registration management 
+   \item The settings management 
    \end{itemize}
     
    
-   Once the lower level subcomponents have successfully been integrated, we can think about integrating the resulting high level subsystems together in order to have the Power\&Joy System
+   Once the lower level subcomponents have successfully been integrated, we can think about integrating the resulting high level subsystems together in order to have the Power\&Joy System.
    The data access utilities is an atomic high level component , while all the other high level components (DBMS, mapping service, remote services interface and the notification system) already exist and are just integrated in order to provide the system with more functionalities.
    
    
@@ -1134,9 +1142,7 @@ Valid argument, the car has at least one issue  &  The system marks that car as 
 \end{center}
         
         
-    \subsubsection{Service Statistics, Data Access Utilities}       
-        
-        %FINIRE QUA
+ 
         
         
    \newpage     
@@ -1265,6 +1271,109 @@ Valid argument, the car has at least one issue  &  The system marks that car as 
       %FINIRE QUA
       
       
+         \begin{center}
+   \begin{flushleft}
+    \textbf{reserveCar(carId, userId)}
+    \end{flushleft}
+        \begin{tabular}{  |  p{6cm} | p{6cm} |}
+    \hline
+    \textit{input} &  \textit{effect} \\
+    \hline
+    
+    Null parameter & NullArgumentException
+     \\ 
+  \hline
+   not valid  userId & InvalidArgumentValueException  \\
+  \hline
+   Not valid  carId & InvalidArgumentValueException  \\
+  \hline
+  Valid userId and  car & the system reserves the car for the user  \\
+  \hline
+    \end{tabular}
+\end{center}
+
+
+   \begin{center}
+   \begin{flushleft}
+    \textbf{startRide(userId, carId)}
+    \end{flushleft}
+        \begin{tabular}{  |  p{6cm} | p{6cm} |}
+    \hline
+    \textit{input} &  \textit{effect} \\
+    \hline
+    
+    Null parameter & NullArgumentException
+     \\ 
+  \hline
+   Not valid userId & InvalidArgumentValueException  \\
+  \hline
+   Not valid  carId & InvalidArgumentValueException  \\
+  \hline
+   Not valid  reservation associated to the user & InvalidArgumentValueException  \\
+  \hline
+  Valid user  and car identifiers, valid reservation &  the reservation is cancelled and a new ride is created   \\
+  \hline
+    \end{tabular}
+\end{center}
+
+
+
+   \begin{center}
+   \begin{flushleft}
+    \textbf{endRide(rideId)}
+    \end{flushleft}
+        \begin{tabular}{  |  p{6cm} | p{6cm} |}
+    \hline
+    \textit{input} &  \textit{effect} \\
+    \hline
+    
+    Null parameter & NullArgumentException
+     \\ 
+  \hline
+   Not valid rideId & InvalidArgumentValueException  \\
+  \hline
+  Valid rideId & The system  ends  the ride  \\
+  \hline
+    \end{tabular}
+\end{center}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       \subsubsection{Remote Services Interface, Account Manager } %3.4.2
       
@@ -1378,9 +1487,9 @@ Valid argument, the car has at least one issue  &  The system marks that car as 
  As concerns the business logics inside the JEE environment, we are going to use mainly three tools:
  \begin{itemize}
  
- \item[Junit framework]: is a tool mostly used for unit testing, but still valid for some integration testing activities such as verifying that invoked methods return correct objects, that the right exceptions are raised when certain selected parameters are sent as inputs to them , and other issues due to the interaction among the components.
- \item [Mockito]: is a tool really useful in order to provide functional  dependencies abstraction, by means of ''mocking'' not yet implemented classes, parts of code and external components, in order to test the interaction with other components of the system and provide predictable results.
- \item [Arquillan framework]: this tool is used to define containers (e.g. .jar files ) to check that the the interaction between components and their surrounding environment happens correctly, that the connections with the database correctly work and that the right components are injected during the execution of each functionality of the system.
+ \item[\textbf{Junit framework}]: is a tool mostly used for unit testing, but still valid for some integration testing activities such as verifying that invoked methods return correct objects, that the right exceptions are raised when certain selected parameters are sent as inputs to them , and other issues due to the interaction among the components.
+ \item [\textbf{Mockito}]: is a tool really useful in order to provide functional  dependencies abstraction, by means of ''mocking'' not yet implemented classes, parts of code and external components, in order to test the interaction with other components of the system and provide predictable results.
+ \item [\textbf{Arquillan framework}]: this tool is used to define containers (e.g. .jar files ) to check that the the interaction between components and their surrounding environment happens correctly, that the connections with the database correctly work and that the right components are injected during the execution of each functionality of the system.
   \end{itemize}
   
   We also need some tool to analyse and test the performance of the system. To do that we use Jmeter, which is a tool built in Java that can be run on any environment, and provides functionalities to simulate the usage of any function provided by the system (such as logging, filling forms, etc.) from any number of users, thanks to the creation of threads. The results of the tests are available to be analysed in terms of throughput provided against the number of simulated requests.     
@@ -1436,19 +1545,116 @@ These devices will be used to test both the native mobile applications and the m
   
    
   \subsection{Program stubs and Drivers}
+  In this section we are going to describe the drivers needed to perform the integration tests described above. This is due to the choice of bottom-up approach strategy used to perform all the tests, as mentioned in the integration strategy section (2.3).
+  These drivers are going to perform the actual methods invocations of all the subcomponents, according to the Junit framework.
+  
+  \begin{description}
+  
+  
+    \item[\textbf{Data Access Drtiver:}] this testing module will invoke the methods exposed by the Data Access Utilities component in order to test its interaction with the DBMS
+    
+    
+    
+    \item[\textbf{Ride Management Driver:}] this testing module will invoke the methods exposed by the Ride Management Subcomponent  in order to test its interaction with the Location Management, Car Management , Data Access utilities, and the Notification system
+    \item[\textbf{Reservation Management Driver:}] this testing module will invoke the methods exposed by the Reservation Management Subcomponent  in order to test its interaction with the Location Management, Car Management, Data Access Utilities, Notification System
+   \item[\textbf{Car Management Driver:}] this testing module will invoke the methods exposed by the Car Management Subcomponent  in order to test its interaction with the Data Access Utilities, Notification System, Mapping Service, Issues Management
+   \item[\textbf{Issues Management Driver:}] this testing module will invoke the methods exposed by the Issues Management Subcomponent  in order to test its interaction with the Ride Management, Data Access utilities, Notification system
+   \item[\textbf{Location Management Driver:}] this testing module will invoke the methods exposed by the Location Management Subcomponent  in order to test its interaction with the Mapping Service
+   
+   
+   \item[\textbf{Car Sharing Driver}] this testing module will invoke the methods exposed by the Location Management Subcomponent  in order to test its interaction with the Mapping Service, DataAccess Utilities, Notification System
+   
+  
+  \item[\textbf{Account Management Driver:}] this testing module will invoke the methods exposed by the Account Management subsystem to test its interactions with the Data Access Utilities and the Notification System components
+  \item[\textbf{System Administration Driver:}] this testing module will invoke the methods exposed by the System Administration subsystem to test its interactions with the Data Access Utilities and the Notification System components.
+  
+  
+  
+  
+  
+  \end{description}
+  
+  
+  The bottom-up approach in principle r does not require any stub for the integration testing. Anyway, since we start developing the system from the backend components, we are going to use some of them to simulate the functionalities (the requests) from the clients in order to make sure that the interactions between them and the core of the system correctly work.
   
   
   
   
   \subsection{Test Data}
+  in this section we give some guidelines over the data needed to perform all the tests described in this document:
+  
+  
+  \begin{itemize}
+  
+  \item A list of both valid and invalid User and Operator instances to test the Registration and Login subcomponents of the Account Manager Subsystem. The set should contain instances exhibiting the following problems:
+  
+  \begin{itemize}
+  
+    \item Null / empty fields
+    \item null objects
+    \item Personal details not compliant with the regular format (age, fiscal code, ecc.)
+  \item Driving license not compliant with the legal format
+  \end{itemize}
+  
+
+  \item A list of both valid and invalid Cars  instances to test the Car Management subcomponent. The set should contain instances exhibiting the following problems:
+  
+  
+    \begin{itemize}
+  
+    \item Null / empty fields
+    \item null objects
+    \item Invalid CarId
+  \item invalid position
+  \end{itemize}
+  
+  
+  \item A list of both valid and invalid Reservations  instances to test the Reservation management subcomponent. The set should contain instances exhibiting the following problems:
   
   
   
+    \begin{itemize}
+  
+    \item Null / empty fields
+    \item null objects
+    \item Invalid ReservationId
+  \item Invalid /already existent User/car identifiers
+  \end{itemize}
   
   
-  \newpage
-  		
+  
+  \item A list of both valid and invalid Rides  instances to test the Ride management subcomponent. The set should contain instances exhibiting the following problems:
+  
+  
+  
+    \begin{itemize}
+  
+    \item Null / empty fields
+    \item null objects
+    \item Invalid RideId
+  \item Invalid User/length/final price/passengers parameters
+  \end{itemize}
+  
+ 
+  
+  
+    \item A list of both valid and invalid Issues  instances to test the  Issues management subcomponent. The set should contain instances exhibiting the following problems:
+    \begin{itemize}
+  
+    \item Null / empty fields
+    \item null objects
+    \item Invalid Issue identifier
+  \item Invalid User/Ride/Reservation identifiers
+  \end{itemize}
+  
+  \end{itemize}
+  
+  
+  \newpage		
   \section{Effort Spent} 		% 6)EFFORT SPENT
+  
+  To redact this document, we spent 30 hours per person.
+  
   
   
   
