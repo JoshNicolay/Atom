@@ -1,0 +1,491 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  22 JAN 2017 18:12
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**PP1.0.tex
+(./PP1.0.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count89
+\lst@currlwidth=\dimen105
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen108
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen109
+\extrarowheight=\dimen110
+\NC@list=\toks16
+\extratabsurround=\skip43
+\backup@length=\skip44
+) (./PP1.0.aux)
+\openout1 = `PP1.0.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen111
+\scratchbox=\box28
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen112
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks18
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count102
+
+<images/logo.png, id=1, 441.65pt x 192.72pt>
+File: images/logo.png Graphic file (type png)
+ <use images/logo.png>
+Package pdftex.def Info: images/logo.png used on input line 16.
+(pdftex.def)             Requested size: 284.54195pt x 142.26355pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
+s/logo.png>] [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 117.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 117.
+
+Overfull \hbox (131.79128pt too wide) in paragraph at lines 117--128
+ [] 
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 147.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+ [4]
+<images/s12.png, id=20, 994.71625pt x 177.66376pt>
+File: images/s12.png Graphic file (type png)
+ <use images/s12.png>
+Package pdftex.def Info: images/s12.png used on input line 197.
+(pdftex.def)             Requested size: 298.41718pt x 53.29953pt.
+
+<images/s11.png, id=22, 990.70125pt x 180.675pt>
+File: images/s11.png Graphic file (type png)
+ <use images/s11.png>
+Package pdftex.def Info: images/s11.png used on input line 202.
+(pdftex.def)             Requested size: 297.21266pt x 54.20291pt.
+
+<images/s13.png, id=23, 997.7275pt x 177.66376pt>
+File: images/s13.png Graphic file (type png)
+ <use images/s13.png>
+Package pdftex.def Info: images/s13.png used on input line 210.
+(pdftex.def)             Requested size: 299.32056pt x 53.29953pt.
+ [5 <./images/s12.png> <./images/s11.png> <./images/s13.png>]
+<images/s2.png, id=30, 1041.8925pt x 352.31625pt>
+File: images/s2.png Graphic file (type png)
+ <use images/s2.png>
+Package pdftex.def Info: images/s2.png used on input line 215.
+(pdftex.def)             Requested size: 312.57016pt x 105.69568pt.
+
+<images/s3.png, id=31, 875.27pt x 698.61pt>
+File: images/s3.png Graphic file (type png)
+ <use images/s3.png>
+Package pdftex.def Info: images/s3.png used on input line 220.
+(pdftex.def)             Requested size: 262.58302pt x 209.58461pt.
+
+<images/s4.png, id=32, 490.83376pt x 198.7425pt>
+File: images/s4.png Graphic file (type png)
+ <use images/s4.png>
+Package pdftex.def Info: images/s4.png used on input line 224.
+(pdftex.def)             Requested size: 294.50252pt x 119.24641pt.
+ [6 <./images/s2.png> <./images/s3.png> <./images/s4.png>] [7] [8]
+<images/ILF.png, id=46, 623.32875pt x 224.84pt>
+File: images/ILF.png Graphic file (type png)
+ <use images/ILF.png>
+Package pdftex.def Info: images/ILF.png used on input line 358.
+(pdftex.def)             Requested size: 311.6636pt x 112.41972pt.
+ [9 <./images/ILF.png>] <images/ELF.png, id=51, 622.325pt x 146.5475pt>
+File: images/ELF.png Graphic file (type png)
+
+<use images/ELF.png>
+Package pdftex.def Info: images/ELF.png used on input line 379.
+(pdftex.def)             Requested size: 311.16173pt x 73.27356pt.
+ [10 <./images/ELF.png>]
+<images/EI.png, id=56, 625.33624pt x 491.8375pt>
+File: images/EI.png Graphic file (type png)
+ <use images/EI.png>
+Package pdftex.def Info: images/EI.png used on input line 417.
+(pdftex.def)             Requested size: 312.66736pt x 245.91814pt.
+ [11 <./images/EI.png>] <images/EQ.png, id=61, 621.32124pt x 335.2525pt>
+File: images/EQ.png Graphic file (type png)
+
+<use images/EQ.png>
+Package pdftex.def Info: images/EQ.png used on input line 449.
+(pdftex.def)             Requested size: 310.65987pt x 167.62584pt.
+ [12 <./images/EQ.png>]
+<images/EO.png, id=66, 621.32124pt x 198.7425pt>
+File: images/EO.png Graphic file (type png)
+ <use images/EO.png>
+Package pdftex.def Info: images/EO.png used on input line 472.
+(pdftex.def)             Requested size: 310.65987pt x 99.371pt.
+ [13 <./images/EO.png>] <images/AFP.png, id=72, 499.8675pt x 447.6725pt>
+File: images/AFP.png Graphic file (type png)
+
+<use images/AFP.png>
+Package pdftex.def Info: images/AFP.png used on input line 481.
+(pdftex.def)             Requested size: 249.93314pt x 223.8357pt.
+ <images/FP.png, id=73, 420.57124pt x 182.6825pt>
+File: images/FP.png Graphic file (type png)
+
+<use images/FP.png>
+Package pdftex.def Info: images/FP.png used on input line 491.
+(pdftex.def)             Requested size: 210.28511pt x 91.34102pt.
+ [14 <./images/AFP.png> <./images/FP.png>]
+<images/cocomo/scale.png, id=80, 637.38126pt x 446.66875pt>
+File: images/cocomo/scale.png Graphic file (type png)
+
+<use images/cocomo/scale.png>
+Package pdftex.def Info: images/cocomo/scale.png used on input line 523.
+(pdftex.def)             Requested size: 318.68985pt x 223.33382pt.
+ [15 <./images/cocomo/scale.png>]
+<images/cocomo/scaleValues.png, id=85, 560.0925pt x 188.705pt>
+File: images/cocomo/scaleValues.png Graphic file (type png)
+
+<use images/cocomo/scaleValues.png>
+Package pdftex.def Info: images/cocomo/scaleValues.png used on input line 537.
+(pdftex.def)             Requested size: 280.04556pt x 94.35226pt.
+ [16 <./images/cocomo/scaleValues.png>]
+<images/cocomo/1_RELY.png, id=90, 628.3475pt x 208.78pt>
+File: images/cocomo/1_RELY.png Graphic file (type png)
+
+<use images/cocomo/1_RELY.png>
+Package pdftex.def Info: images/cocomo/1_RELY.png used on input line 551.
+(pdftex.def)             Requested size: 314.17297pt x 104.38972pt.
+
+<images/cocomo/2_DATA.png, id=91, 627.34375pt x 192.72pt>
+File: images/cocomo/2_DATA.png Graphic file (type png)
+
+<use images/cocomo/2_DATA.png>
+Package pdftex.def Info: images/cocomo/2_DATA.png used on input line 556.
+(pdftex.def)             Requested size: 313.6711pt x 96.35976pt.
+
+<images/cocomo/3_CPLX.png, id=92, 630.355pt x 158.5925pt>
+File: images/cocomo/3_CPLX.png Graphic file (type png)
+
+<use images/cocomo/3_CPLX.png>
+Package pdftex.def Info: images/cocomo/3_CPLX.png used on input line 560.
+(pdftex.def)             Requested size: 315.17673pt x 79.29604pt.
+
+<images/cocomo/4_RUSE.png, id=93, 651.43375pt x 221.82875pt>
+File: images/cocomo/4_RUSE.png Graphic file (type png)
+
+<use images/cocomo/4_RUSE.png>
+Package pdftex.def Info: images/cocomo/4_RUSE.png used on input line 564.
+(pdftex.def)             Requested size: 325.71606pt x 110.9141pt.
+
+Overfull \hbox (5.7161pt too wide) in paragraph at lines 564--566
+[][] 
+ []
+
+[17 <./images/cocomo/1_RELY.png> <./images/cocomo/2_DATA.png> <./images/cocomo/
+3_CPLX.png>] <images/cocomo/5_DOCU.png, id=100, 636.3775pt x 247.92625pt>
+File: images/cocomo/5_DOCU.png Graphic file (type png)
+
+<use images/cocomo/5_DOCU.png>
+Package pdftex.def Info: images/cocomo/5_DOCU.png used on input line 568.
+(pdftex.def)             Requested size: 318.18797pt x 123.96281pt.
+
+<images/cocomo/6_TIME.png, id=101, 629.35126pt x 218.8175pt>
+File: images/cocomo/6_TIME.png Graphic file (type png)
+
+<use images/cocomo/6_TIME.png>
+Package pdftex.def Info: images/cocomo/6_TIME.png used on input line 572.
+(pdftex.def)             Requested size: 314.67485pt x 109.40848pt.
+
+<images/cocomo/7_STOR.png, id=102, 631.35875pt x 201.75375pt>
+File: images/cocomo/7_STOR.png Graphic file (type png)
+
+<use images/cocomo/7_STOR.png>
+Package pdftex.def Info: images/cocomo/7_STOR.png used on input line 576.
+(pdftex.def)             Requested size: 315.6786pt x 100.87662pt.
+ [18 <./images/cocomo/4_RUSE.png> <./images/cocomo/5_DOCU.png> <./images/cocomo
+/6_TIME.png>]
+<images/cocomo/8_PVOL.png, id=109, 630.355pt x 282.05376pt>
+File: images/cocomo/8_PVOL.png Graphic file (type png)
+
+<use images/cocomo/8_PVOL.png>
+Package pdftex.def Info: images/cocomo/8_PVOL.png used on input line 580.
+(pdftex.def)             Requested size: 315.17673pt x 141.02652pt.
+
+<images/cocomo/9_ACAP.png, id=110, 639.38875pt x 195.73125pt>
+File: images/cocomo/9_ACAP.png Graphic file (type png)
+
+<use images/cocomo/9_ACAP.png>
+Package pdftex.def Info: images/cocomo/9_ACAP.png used on input line 587.
+(pdftex.def)             Requested size: 319.69359pt x 97.86537pt.
+
+<images/cocomo/10_PCAP.png, id=111, 635.37375pt x 196.735pt>
+File: images/cocomo/10_PCAP.png Graphic file (type png)
+
+<use images/cocomo/10_PCAP.png>
+Package pdftex.def Info: images/cocomo/10_PCAP.png used on input line 591.
+(pdftex.def)             Requested size: 317.6861pt x 98.36725pt.
+ [19 <./images/cocomo/7_STOR.png> <./images/cocomo/8_PVOL.png> <./images/cocomo
+/9_ACAP.png>]
+<images/cocomo/11_APEX.png, id=119, 639.38875pt x 195.73125pt>
+File: images/cocomo/11_APEX.png Graphic file (type png)
+
+<use images/cocomo/11_APEX.png>
+Package pdftex.def Info: images/cocomo/11_APEX.png used on input line 595.
+(pdftex.def)             Requested size: 319.69359pt x 97.86537pt.
+
+<images/cocomo/12_PLEX.png, id=120, 622.325pt x 196.735pt>
+File: images/cocomo/12_PLEX.png Graphic file (type png)
+
+<use images/cocomo/12_PLEX.png>
+Package pdftex.def Info: images/cocomo/12_PLEX.png used on input line 599.
+(pdftex.def)             Requested size: 311.16173pt x 98.36725pt.
+
+<images/cocomo/13_LTEX.png, id=121, 639.38875pt x 196.735pt>
+File: images/cocomo/13_LTEX.png Graphic file (type png)
+
+<use images/cocomo/13_LTEX.png>
+Package pdftex.def Info: images/cocomo/13_LTEX.png used on input line 603.
+(pdftex.def)             Requested size: 319.69359pt x 98.36725pt.
+ [20 <./images/cocomo/10_PCAP.png> <./images/cocomo/11_APEX.png> <./images/coco
+mo/12_PLEX.png>]
+<images/cocomo/14_PCON.png, id=128, 635.37375pt x 194.7275pt>
+File: images/cocomo/14_PCON.png Graphic file (type png)
+
+<use images/cocomo/14_PCON.png>
+Package pdftex.def Info: images/cocomo/14_PCON.png used on input line 607.
+(pdftex.def)             Requested size: 317.6861pt x 97.3635pt.
+
+<images/cocomo/15_TOOL.png, id=129, 643.40375pt x 315.1775pt>
+File: images/cocomo/15_TOOL.png Graphic file (type png)
+
+<use images/cocomo/15_TOOL.png>
+Package pdftex.def Info: images/cocomo/15_TOOL.png used on input line 612.
+(pdftex.def)             Requested size: 321.70108pt x 157.58836pt.
+
+Overfull \hbox (1.70111pt too wide) in paragraph at lines 612--613
+[][]  
+ []
+
+[21 <./images/cocomo/13_LTEX.png> <./images/cocomo/14_PCON.png> <./images/cocom
+o/15_TOOL.png>] <images/cocomo/16_SITE.png, id=136, 631.35875pt x 329.23pt>
+File: images/cocomo/16_SITE.png Graphic file (type png)
+
+<use images/cocomo/16_SITE.png>
+Package pdftex.def Info: images/cocomo/16_SITE.png used on input line 616.
+(pdftex.def)             Requested size: 315.6786pt x 164.6146pt.
+
+<images/cocomo/17_SCED.png, id=137, 639.38875pt x 196.735pt>
+File: images/cocomo/17_SCED.png Graphic file (type png)
+
+<use images/cocomo/17_SCED.png>
+Package pdftex.def Info: images/cocomo/17_SCED.png used on input line 620.
+(pdftex.def)             Requested size: 319.69359pt x 98.36725pt.
+ [22 <./images/cocomo/16_SITE.png> <./images/cocomo/17_SCED.png>] <images/cocom
+o/final.png, id=143, 636.3775pt x 385.44pt>
+File: images/cocomo/final.png Graphic file (type png)
+
+<use images/cocomo/final.png>
+Package pdftex.def Info: images/cocomo/final.png used on input line 637.
+(pdftex.def)             Requested size: 318.18797pt x 192.71953pt.
+ [23 <./images/cocomo/final.png>] [24]
+<images/gantt1.png, id=154, 1355.0625pt x 1700.3525pt>
+File: images/gantt1.png Graphic file (type png)
+ <use images/gantt1.png>
+Package pdftex.def Info: images/gantt1.png used on input line 688.
+(pdftex.def)             Requested size: 406.5219pt x 510.1097pt.
+
+Overfull \hbox (61.5219pt too wide) in paragraph at lines 688--689
+[][]  
+ []
+
+<images/ganttNico.png, id=155, 917.4275pt x 1620.0525pt>
+File: images/ganttNico.png Graphic file (type png)
+
+<use images/ganttNico.png>
+Package pdftex.def Info: images/ganttNico.png used on input line 695.
+(pdftex.def)             Requested size: 275.23038pt x 486.0195pt.
+ [25 <./images/gantt1.png (PNG copy)>] [26] [27 <./images/ganttNico.png (PNG co
+py)>]
+<images/ganttMike.png, id=166, 917.4275pt x 1620.0525pt>
+File: images/ganttMike.png Graphic file (type png)
+
+<use images/ganttMike.png>
+Package pdftex.def Info: images/ganttMike.png used on input line 697.
+(pdftex.def)             Requested size: 275.23038pt x 486.0195pt.
+ [28 <./images/ganttMike.png (PNG copy)>] [29]
+[30] (./PP1.0.aux) ) 
+Here is how much of TeX's memory you used:
+ 2901 strings out of 493014
+ 43620 string characters out of 6133350
+ 106215 words of memory out of 5000000
+ 6403 multiletter control sequences out of 15000+600000
+ 5158 words of font info for 19 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,8n,32p,988b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb>
+Output written on PP1.0.pdf (30 pages, 1108184 bytes).
+PDF statistics:
+ 203 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+
