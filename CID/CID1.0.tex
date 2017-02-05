@@ -240,22 +240,30 @@ No tabs are used \\
 
 
 \subsection{Braces}
-\textbf{10. Consistent bracing style is used, either the preferred ''Allman'' style (first brace goes underneath the opening block) or the ''Kernighan and Ritchie'' style (first brace is on the same line of the instruction that opens the new block).}\\
-The ?Allman? style is used in the whole document
+\textbf{10. Consistent bracing style is used, either the preferred  ''Allman'' style (first brace goes underneath the opening block) or the ''Kernighan and Ritchie'' style (first brace is on the same line of the instruction that opens the new block).}\\
+\vspace{0.5cm}
+The ''Allman'' style is used in the whole document\\
+\vspace{0.5cm}
 \textbf{11. All if, while, do-while, try-catch, and for statements that have only one statement to execute are surrounded by curly braces.}\\
-No curly braces for single 'if' instructions are used at the following lines:
+\vspace{0.5cm}
+No curly braces for single 'if' instructions are used at the following lines:\\
+\vspace{0.5cm}
 \begin{itemize}
-\item lines 318-319 :
+\item lines 318-319 :\\
+\vspace{0.5cm}
 \begin{lstlisting}
  if (linkText.indexOf("?") < 0)  linkText.append("?");
             else linkText.append("&amp;");
 \end{lstlisting}
-\item lines 340-341:
+\vspace{0.5cm}
+\item lines 340-341:\\
+\vspace{0.5cm}
 \begin{lstlisting}
 if (linkText.indexOf("?") < 0)  linkText.append("?");
             else linkText.append("&amp;"); 
   \end{lstlisting}
 \end{itemize}
+\vspace{0.5cm}
 
 
 
@@ -272,18 +280,18 @@ These are the lines that exceed the length of 80 characters\\
 \vspace{0.5cm}
 \textbf{14. When line length must exceed 80 characters, it does NOT exceed 120 characters.}\\
 \vspace{0.5cm}
-he following lines exceed the length of 120 characters: 113, 324, 333, 334, 345 \\
+The following lines exceed the length of 120 characters: 113, 324, 333, 334, 345 \\
 \vspace{0.5cm}
 
 
 \subsection{Wrapping Lines}
 \textbf{15. Line break occurs after a comma or an operator}\\
 \vspace{0.5cm}
-Line breaks are always used after a comma or an operator
+Line breaks are never used after a comma or an operator\\
 \vspace{0.5cm}
 \textbf{16. Higher-level breaks are used.}\\
 \vspace{0.5cm}
-Higher lvl breaks are used to allow readability\\
+Higher level breaks are used to allow readability\\
 \vspace{0.5cm}
 \textbf{17. A new statement is aligned with the beginning of the expression at the same level as the previous line.}\\
 \vspace{0.5cm}
@@ -367,6 +375,7 @@ There is only one public class\\
 \vspace{0.5cm}
 Javadoc is not complete\\
 \vspace{0.5cm}
+\newpage
 \textbf{23. Check that the javadoc is complete (i.e., it covers all classes and files part of the set of classes assigned to you).}\\
 \vspace{0.5cm}
 Javadoc for the class ItrateSectionWidget.java is not complete\\
@@ -375,7 +384,7 @@ Javadoc for the class ItrateSectionWidget.java is not complete\\
 
 
 \subsection{Package and Import Statements}
-\textbf{24. If any package statements are needed, they should be the first noncomment statements. Import statements follow.}\\
+\textbf{24. If any package statements are needed, they should be the first non comment statements. Import statements follow.}\\
 \vspace{0.5cm}
 Package and import statements are in the correct order\\
 \vspace{0.5cm}
@@ -708,7 +717,7 @@ All the items returned by method calls are coherent with the expected values \\
 
 
 \subsection{Arrays}
-\textbf{Check that there are no off-by-one errors in array indexing (that is, all required array elements are correctly accessed through the index).}\\
+\textbf{37. Check that there are no off-by-one errors in array indexing (that is, all required array elements are correctly accessed through the index).}\\
 \vspace{0.5cm}
 Arrays are not scanned by loops. The only array instance is found at   line 135:\\
 \vspace{0.5cm}
@@ -727,11 +736,11 @@ theList = Arrays.asList(a);
 \end{lstlisting}
 \vspace{0.5cm}
 
-\textbf{Check that all array (or other collection) indexes have been prevented from going out-of-bounds.}\\
+\textbf{38. Check that all array (or other collection) indexes have been prevented from going out-of-bounds.}\\
 \vspace{0.5cm}
 Every time a collection is created or accessed, there are instructions that check if it is null. \\
 \vspace{0.5cm}
-For example the listNameExdr is initialized at line 76 calling the getInstance() method of the FlxibleMapAccessor class:\\
+For example the listNameExdr is initialized at line 76 calling the getInstance() method of the FlexibleMapAccessor class:\\
 \vspace{0.5cm}
 \begin{lstlisting}
 this.listNameExdr = FlexibleMapAccessor.getInstance(listName); 
@@ -756,7 +765,7 @@ the getInstence method is reported below (lines 87-97), and contains all the nee
 All Iterators correctly access collections and sets defined.  \\ 
 \vspace{0.5cm}
     
- \textbf{39. Check that constructors are called when a new array item is desired.}
+ \textbf{39. Check that constructors are called when a new array item is desired.}\\
  \vspace{0.5cm}
  Every time a collection or array is desired, the right constructor is called.\\
  \vspace{0.5cm}
@@ -766,10 +775,10 @@ All Iterators correctly access collections and sets defined.  \\
 
 
 \subsection{Object Comparison}
-\textbf{Check that all objects (including Strings) are compared with equals and not with ==.}\\
+\textbf{40. Check that all objects (including Strings) are compared with equals and not with ==.}\\
 \vspace{0.5cm}
 
-Some issues of bad comparison are to b found as follows:\\
+Some issues of bad comparison are to be found as follows:\\
 \vspace{0.5cm}
 
 \begin{itemize}
@@ -779,7 +788,7 @@ Some issues of bad comparison are to b found as follows:\\
 if (obj == null) {
 \end{lstlisting}
 \vspace{0.5cm}
-bad comparison for object obj declard at line 127 as\\
+bad comparison for object obj declared at line 127 as\\
 \vspace{0.5cm}
 \begin{lstlisting}
 Object obj = listNameExdr.get(context);
@@ -813,7 +822,7 @@ UtilGenerics.checkMap(context.get("globalContext"));
 if (targetService == null) {
 \end{lstlisting}
 \vspace{0.5cm}
-bad comparison for String targetService, declard at line 244 as:\\
+bad comparison for String targetService, declared at line 244 as:\\
 \vspace{0.5cm}
 \begin{lstlisting}
 String targetService = this.getPaginateTarget(context);
@@ -885,7 +894,8 @@ There is no brutish programming, for instance, when managing the page numbering 
         actualPageSize = highIndex - lowIndex;
    \end{lstlisting}     
      \vspace{0.5cm}   
-        
+ \newpage
+       
 \textbf{45. Check order of computation/evaluation, operator precedence and parenthesizing.}  \\
 \vspace{0.5cm}
 All operators precedences are respected, parenthesys are correctly used when concatenations of method calls are done \\
@@ -969,7 +979,7 @@ instead of in another class.
 
 \subsection{Exceptions}
 
-\textbf{2. Check that the relevant exceptions are caught.}\\
+\textbf{52. Check that the relevant exceptions are caught.}\\
 \vspace{0.5cm}
 All relevant exceptions are caught. \\
 \vspace{0.5cm}
