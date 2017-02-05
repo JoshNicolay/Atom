@@ -1,0 +1,1120 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{listings}
+\graphicspath{ {images/} }
+
+ \pagenumbering{arabic}
+ \usepackage{array}
+ 
+
+
+
+
+
+\begin{document}
+
+\includegraphics[width=10cm, height=5cm]{logo} \break \break
+
+\centering {\textbf{Computer Science and Engineering} }\\
+
+ \centering{A.A. 2016/2017} \\
+\centering{Software Engineering 2 Project:} \\
+
+\centering{\textbf{ Power\&Joy} }\break
+
+
+
+\centering{\textbf{\large{Code Inspection Document }} }\break \break
+
+\centering{February 5, 2017}\break
+
+
+
+
+
+\begin{flushright}
+
+
+Prof. Luca Mottola\break 
+Joshua Nicolay Ortiz Osorio \ Matr: 806568 \\
+Michelangelo Medori \ Matr: 878025
+
+\end{flushright}
+
+\newpage
+
+\centering {\textbf{Index}} \\    %INDEX
+\begin{enumerate}
+
+\item Introduction
+
+
+
+
+\begin {enumerate}
+
+\item [1.1] Purpose and Scope
+\item [1.2] Reference Documents
+
+
+\end{enumerate}
+
+\item Classes assigned to the group
+
+
+\begin {enumerate}
+\item [2.1] Namespace patterns and names
+
+\item [2.2] Functional role of the assigned classes
+
+
+
+\end {enumerate} 
+
+
+
+
+\item[3] Issues found applying the checklist
+\begin{enumerate}
+\item [3.1] Naming Conventions
+\item [3.2] Indention
+\item [3.3] Braces
+\item [3.4] File Organisation
+\item [3.5] Wrapping Lines
+\item [3.6] Comments
+\item [3.7] Java Source Files
+\item [3.8] Package and Import Statements
+\item [3.9] Class and Interface Declarations
+\item [3.10] Initialisation and Declarations
+\item [3.11] Method Calls
+\item [3.12] Arrays
+\item [3.13] Object Comparison
+\item [3.14] Output Format
+\item [3.15] Computation, Comparisons and Assignments
+\item [3.16] Exceptions
+\item [3.17] Flow of Control
+\item [3.18] Files
+
+\end{enumerate}
+
+
+
+\item[4] Other Issues 
+
+
+
+\item[5] Effort Spent
+
+
+
+
+
+
+\end{enumerate}
+
+\newpage  
+ 
+\begin{flushleft}  
+
+\section{Introduction}
+
+
+\subsection{Purpose and Scope}
+This is the Code Inspection Document for the Software Engineering 2 course project. The aim of this document is to report a list of all the issues that the members of our project group managed to find into some source code that has been assigned to us.
+As described in section 2, in our case the source code consists of a single class, taken from the Apache ofbiz project. Section 2 contains also contains a brief description of the functional role of this class.
+Section 3 contains the list of the issues found; they are listed following the order that has been given to us on the assignments documents.
+
+
+\vspace{1cm}
+\subsection{Reference Documents}
+
+\begin{itemize}
+\item Assignments AA 2016-2017.pdf
+\item Code Inspection Assignment Task Description.pdf
+\item IterateSectionWidget.java
+\item apache-ofbiz-16.11.01 source code
+\end{itemize}
+
+
+\newpage
+\section{Classes assigned to the group}
+We have being assigned a single class , taken from the Apache ofbiz source code. Follows name and namespace of the class, and a description of its functional role
+\vspace{1cm}
+\subsection{Namespace patterns and names}
+
+
+\textbf{namespace}\\
+../apache-ofbiz-16.11.01/framework/widget/src/main/java/org/apache/ofbiz/widget/model/IterateSectionWidget.java\\
+\vspace{0.5cm}
+
+\textbf{name of the class}\\
+IterateSectionWidget.java
+
+\vspace{1cm}
+\subsection{Functional role of the assigned classes}
+The selected class is used to manage the widget sections of the Apache Ofbiz  Application. A widget is a graphical element that provides immediate access to some of the main functionalities of the application, commonly used as shortcuts. The Apache Ofbitz application provides a list of widgets that users can customize as they prefer. The IterateSectionWidget.java class provides methods to iterate through the widgets sections and display them, by means of writing an XML file with data accessed via a Map structure.   
+
+
+
+
+\newpage{}
+
+\section{Issues found applying the checklist}
+
+
+
+\subsection{ Naming Conventions}
+\textbf{1. All class names, interface names, method names, class variables, method variables, and constants used should have meaningful names and do what the name suggests.}\\
+\vspace{0.5cm}
+The method ''accept '' declared at lines 361 to 363 should have a more meaningful name:
+\vspace{0.5cm}
+
+\begin{lstlisting}
+public void accept(ModelWidgetVisitor visitor) throws Exception {
+        visitor.visit(this);
+    } 
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+\textbf{2. If one-character variables are used, they are used only for temporary ?throwaway? variables, such as those used in for loops.}\\
+\vspace{0.5cm}
+There is only a one-character array variable declared at line 135:
+\vspace{0.5cm}
+\begin{lstlisting}
+  Object [] a = entrySet.toArray(); 
+  \end{lstlisting}
+  but is soon converted to a List at line 136:
+  \begin{lstlisting}
+  theList = Arrays.asList(a);
+  \end{lstlisting}
+  \vspace{0.5cm}
+  which means it's a throwaway variable, and does not represent an issue.
+  \vspace{0.5cm}
+   
+\textbf{3. Class names are nouns, in mixed case, with the first letter of each word in capitalized.}\\
+\vspace{0.5cm}
+IterateSectionWidget is the name of a class and contains the verb Iterate. Anyway it could be considered as a noun and does not represent an issue.
+\vspace{0.5cm}
+
+
+\textbf{4. Interface names should be capitalized like classes.}\\
+\vspace{0.5cm}
+The only intrface name that appears is ModelScreenWidget, and it  respect the constrain
+\vspace{0.5cm}
+
+
+\textbf{5. Method names should be verbs, with the first letter of each addition word capitalized}\\
+\vspace{0.5cm}
+All methods names are verbs
+\vspace{0.5cm}
+
+
+\textbf{6. Class variables, also called attributes, are mixed case, but might begin with an underscore (? ?) followed by a lowercase first letter. All the remaining words in the variable name have their first letter capitalized.}\\
+\vspace{0.5cm}
+There are not variables that begin with an underscore. They all begin with a lowercase letter, and do not repreesnt an issue
+\vspace{0.5cm}
+
+
+\textbf{7. Constants are declared using all uppercase with words separated by an underscore}\\
+\vspace{0.5cm}
+
+All constants names are capitalized and contain underscores to separate the words  \\
+\vspace{0.5cm}
+
+
+
+
+\subsection{Indention}
+\textbf{8. Three or four spaces are used for indentation and done so consistently.}\\
+\vspace{0.5cm}
+Identation is used correctly\\
+\vspace{0.5cm}
+\textbf{9. No tabs are used to indent.}\\
+\vspace{0.5cm}
+No tabs are used \\
+\vspace{0.5cm}
+
+
+
+
+
+\subsection{Braces}
+\textbf{10. Consistent bracing style is used, either the preferred ''Allman'' style (first brace goes underneath the opening block) or the ''Kernighan and Ritchie'' style (first brace is on the same line of the instruction that opens the new block).}\\
+The ?Allman? style is used in the whole document
+\textbf{11. All if, while, do-while, try-catch, and for statements that have only one statement to execute are surrounded by curly braces.}\\
+No curly braces for single 'if' instructions are used at the following lines:
+\begin{itemize}
+\item lines 318-319 :
+\begin{lstlisting}
+ if (linkText.indexOf("?") < 0)  linkText.append("?");
+            else linkText.append("&amp;");
+\end{lstlisting}
+\item lines 340-341:
+\begin{lstlisting}
+if (linkText.indexOf("?") < 0)  linkText.append("?");
+            else linkText.append("&amp;"); 
+  \end{lstlisting}
+\end{itemize}
+
+
+
+
+\subsection{ File Organization}
+\textbf{12. Blank lines and optional comments are used to separate sections (be- ginning comments, package/import statements, class/interface declarations which include class variable/attributes declarations, constructors, and methods).}\\
+\vspace{0.5cm}
+blank lines are consistently used to separate sections. \\
+\vspace{0.5cm}
+\textbf{13. Where practical, line length does not exceed 80 characters.}\\
+\vspace{0.5cm}
+These are the lines that exceed the length of 80 characters\\
+\vspace{0.5cm}?Lines: 70, 87, 88, 95, 99, 101, 113, 134, 151, 152, 232, 243, 249, 250, 257, 324, 327, 328, 333, 334, 335, 345, 348, 349. \\
+\vspace{0.5cm}
+\textbf{14. When line length must exceed 80 characters, it does NOT exceed 120 characters.}\\
+\vspace{0.5cm}
+he following lines exceed the length of 120 characters: 113, 324, 333, 334, 345 \\
+\vspace{0.5cm}
+
+
+\subsection{Wrapping Lines}
+\textbf{15. Line break occurs after a comma or an operator}\\
+\vspace{0.5cm}
+Line breaks are always used after a comma or an operator
+\vspace{0.5cm}
+\textbf{16. Higher-level breaks are used.}\\
+\vspace{0.5cm}
+Higher lvl breaks are used to allow readability\\
+\vspace{0.5cm}
+\textbf{17. A new statement is aligned with the beginning of the expression at the same level as the previous line.}\\
+\vspace{0.5cm}
+New statements are always aligned with the beginning of the expression at the same level as the previous line.\\
+\vspace{0.5cm}
+
+
+\subsection{Comments}
+
+\textbf{18. Comments are used to adequately explain what the class, interface, methods, and blocks of code are doing.}\\
+\vspace{0.5cm}
+There are not enough comments to explain the function of the class, variables, attributes, methods , blocks of code and method calls.\\
+\vspace{0.5cm}
+The only two useful comments are found at lines 121, 300.\\
+\vspace{0.5cm}
+\textbf{19. Commented out code contains a reason for being commented out and a date it can be removed from the source file if determined it is no longer needed.}\\
+\vspace{0.5cm}
+There are two blocks of commented out code, and none of them contains a date or an explanation for it's presence in the file.\\
+\vspace{0.5cm}
+In particular, the following  commented out code block at lines 282-296\\
+\vspace{0.5cm}
+\begin{lstlisting}
+   /*
+        int highIndex = -1;
+        try {
+            highIndex = modelForm.getHighIndex();
+        } catch (Exception e) {
+            highIndex = 0;
+        }
+
+        int lowIndex = -1;
+        try {
+            lowIndex = modelForm.getLowIndex();
+        } catch (Exception e) {
+            lowIndex = 0;
+        }
+         */
+           \end{lstlisting}
+           \vspace{0.5cm}
+which is clearly an alternative to the non-commentd-out  block of code it follows (lines 267-289)\\
+\vspace{0.5cm}
+\begin{lstlisting}
+  int viewIndex = -1;
+        try {
+            viewIndex = ((Integer) context.get("viewIndex")).intValue();
+        } catch (Exception e) {
+            viewIndex = 0;
+        }
+
+        int viewSize = -1;
+        try {
+            viewSize = ((Integer) context.get("viewSize")).intValue();
+        } catch (Exception e) {
+            viewSize = this.getViewSize();
+        }
+          \end{lstlisting}
+          
+\vspace{0.5cm}          
+looks quite inappropriate.\\
+\vspace{0.5cm}
+
+
+An other commented out code block are found at lines 320\\
+\vspace{0.5cm}
+\begin{lstlisting}
+ //if (queryString != null && !queryString.equals("null")) 
+ linkText += queryString + "&"; 
+\end{lstlisting}
+\vspace{0.5cm}
+
+\subsection{Java Source Files}
+\textbf{20. Each Java source file contains a single public class or interface.}\\
+\vspace{0.5cm}
+Th java IterateSectionWidget.java file contains only a public class\\
+\vspace{0.5cm}
+\textbf{21. The public class is the first class or interface in the file.}\\
+\vspace{0.5cm}
+There is only one public class\\
+\vspace{0.5cm}
+\textbf{22. Check that the external program interfaces are implemented consistently with what is described in the javadoc.}\\
+\vspace{0.5cm}
+Javadoc is not complete\\
+\vspace{0.5cm}
+\textbf{23. Check that the javadoc is complete (i.e., it covers all classes and files part of the set of classes assigned to you).}\\
+\vspace{0.5cm}
+Javadoc for the class ItrateSectionWidget.java is not complete\\
+\vspace{0.5cm}
+
+
+
+\subsection{Package and Import Statements}
+\textbf{24. If any package statements are needed, they should be the first noncomment statements. Import statements follow.}\\
+\vspace{0.5cm}
+Package and import statements are in the correct order\\
+\vspace{0.5cm}
+
+
+\subsection{Class and Interface Declarations}
+
+\textbf{25. Check the order of the class and interface declarations}\\
+\vspace{0.5cm}
+The order is respected.\\
+\vspace{0.5cm}
+\textbf{26. Methods are grouped by functionality rather than by scope or accessibility.}\\
+\vspace{0.5cm}
+Mthods are grouped by functionality.\\
+\vspace{0.5cm}
+\textbf{27.Check that the code is free of duplicates, long methods, big classes, breaking encapsulation, as well as if coupling and cohesion are adequate.}\\
+\vspace{0.5cm}
+The code at lines 324-329 \\
+\vspace{0.5cm}
+\begin{lstlisting}
+ linkText.append("VIEW_SIZE_"+ paginatorNumber + "=").
+ append(viewSize).append("&amp;VIEW_INDEX_" + 
+ paginatorNumber + "=").append(viewIndex - 1).append("\"");
+
+// make the link
+writer.append(rh.makeLink(request, response, 
+linkText.toString(), false, false, false));
+String previous = UtilProperties.
+getMessage("CommonUiLabels", "CommonPrevious", 
+(Locale) context.get("locale"));
+writer.append(" class=\"buttontext\">[").append(previous).
+append("]</a>\n");
+\end{lstlisting}
+\vspace{0.5cm}
+are duplicated at lines 345-350\\
+\vspace{0.5cm}
+
+
+
+
+\subsection{ Initialisation and Declarations}
+\textbf{28. Check that variables and class members are of the correct type. Check that they have the right visibility (public/private/protected).}\\
+\vspace{0.5cm}
+All variables are of correct type and have the right visibility\\
+\vspace{0.5cm}
+\textbf{29. Check that variables are declared in the proper scope.}\\
+\vspace{0.5cm}
+All variables are declared in the proper scope\\
+\vspace{0.5cm}
+
+\textbf{30. Check that constructors are called when a new object is desired.}\\
+\vspace{0.5cm}
+
+The constructors for the inputFields and queryStringMap, request, response, ctx and rh variables are missing :\\
+\vspace{0.5cm}
+\begin{itemize}
+
+\item{ line 249:} \\
+\vspace{0.5cm}
+\begin{lstlisting}
+ Map<String, Object> inputFields = 
+ UtilGenerics.checkMap(context.get("requestParameters"));
+\end{lstlisting}
+\vspace{0.5cm}
+ 
+ \item{ line 250:}  \\
+ \vspace{0.5cm}
+\begin{lstlisting}
+Map<String, Object> queryStringMap = 
+UtilGenerics.toMap(context.get("queryStringMap"));
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+\item{ line 305:} \\
+\vspace{0.5cm}
+\begin{lstlisting}
+HttpServletRequest request =
+ (HttpServletRequest) context.get("request");
+\end{lstlisting}
+\vspace{0.5cm}
+
+\item{ line 306:}  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+HttpServletResponse response = 
+(HttpServletResponse) context.get("response");
+\end{lstlisting}
+\vspace{0.5cm}
+
+\item{ line 308 and 309:}\\
+\vspace{0.5cm}
+\begin{lstlisting}
+ServletContext ctx = 
+(ServletContext) request.getAttribute("servletContext");
+
+RequestHandler rh = 
+(RequestHandler) ctx.getAttribute("_REQUEST_HANDLER_");
+\end{lstlisting}
+\vspace{0.5cm}
+\end{itemize}
+
+ 
+
+
+All other constructors are correctly called.\\
+Sometimes the constructor, instead of being called directly, is called by a method of another class. For example the constructors for the following object parameters (declared at lines 48-52) \\
+\vspace{0.5cm}
+
+\begin{lstlisting}
+private final FlexibleMapAccessor<Object> listNameExdr; 
+private final FlexibleStringExpander entryNameExdr; 
+private final FlexibleStringExpander keyNameExdr;
+private final FlexibleStringExpander paginateTarget; 
+private final FlexibleStringExpander paginate;
+\end{lstlisting}
+\vspace{0.5cm}
+
+are called inside the relative getIstance() methods as follows:\\
+\vspace{0.5cm}
+\begin{itemize}
+\item line 76:  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+this.listNameExdr = 
+FlexibleMapAccessor.getInstance(listName);
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+\item line 81 : \\
+\vspace{0.5cm}
+\begin{lstlisting}
+ this.entryNameExdr = 
+ FlexibleStringExpander.getInstance(entryName);
+ \end{lstlisting}
+ \vspace{0.5cm}
+
+
+\item line 86:  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+this.keyNameExdr = 
+FlexibleStringExpander.getInstance(keyName);
+\end{lstlisting}
+\vspace{0.5cm}
+
+\item line 87:\\
+\vspace{0.5cm}
+\begin{lstlisting}  
+this.paginateTarget = FlexibleStringExpander.
+getInstance(iterateSectionElement.getAttribute("paginate-target")); 
+\end{lstlisting}
+\vspace{0.5cm}
+
+\item line 88:\\
+\vspace{0.5cm}
+\begin{lstlisting}  
+this.paginate = FlexibleStringExpander.
+getInstance(iterateSectionElement.getAttribute("paginate"));
+\end{lstlisting}
+\end{itemize}
+\vspace{0.5cm}
+
+
+The getIstance() method checks if existing istances for these objects already exist, otherwise creates and returns a new instance for each object (that's because they are declared as final). 
+The getInstance method for the class FlexibleMapAccessor is reported below (lines 87-97)\\
+\vspace{0.5cm}
+
+\begin{lstlisting} 
+public static <T> FlexibleMapAccessor<T> getInstance(String original) {
+      if (UtilValidate.isEmpty(original) || "null".equals(original)) {
+          return nullFma;
+      }
+      FlexibleMapAccessor fma = fmaCache.get(original);
+      if (fma == null) {
+          fmaCache.putIfAbsent(original, new FlexibleMapAccessor(original));
+          fma = fmaCache.get(original);
+      }
+      return fma;
+  }
+\end{lstlisting}
+\vspace{0.5cm}
+
+The  parameter \\
+\vspace{0.5cm}
+\begin{lstlisting}
+ private final List<ModelScreenWidget.Section> sectionList;
+ \end{lstlisting}
+\vspace{0.5cm}
+ 
+ is constructed at line 101:\\
+ \vspace{0.5cm}
+ \begin{lstlisting}
+ ModelScreenWidget.Section section = 
+ new ModelScreenWidget.Section(modelScreen, sectionElement, false);
+ \end{lstlisting}
+ \vspace{0.5cm}
+ 
+ The childElementList is a linked list which is created and returned by the childElementList() method of the UtilXml class\\
+ \vspace{0.5cm}
+ \begin{lstlisting}
+  List<? extends Element> childElementList = 
+  UtilXml.childElementList(iterateSectionElement);
+  \end{lstlisting}
+ \vspace{0.5cm} 
+  
+the contextMs object is created as follows:\\
+
+
+line 123: \\
+\vspace{0.5cm} 
+\begin{lstlisting}
+MapStack<String> contextMs = MapStack.create(context);
+\end{lstlisting}
+\vspace{0.5cm}
+
+ 
+\textbf{31:Check that all object references are initialized before use.}\\
+\vspace{0.5cm}
+All object references are correctly initialized before use.\\
+\vspace{0.5cm}
+
+\textbf{32: Variables are initialized where they are declared, unless dependent upon a computation.}\\
+\vspace{0.5cm}
+All variables are correctly initialized before being used.\\
+\vspace{0.5cm}
+
+\textbf{33 Declarations appear at the beginning of blocks (A block is any code surrounded by curly braces . The exception is a variable can be declared in a for loop.}
+\vspace{0.5cm}
+Not all variables are declared at the beginning of the block they belong.\\
+\vspace{0.5cm}
+
+For the variables declared inside the constructor of the class:
+\vspace{0.5cm}
+
+\begin{itemize}
+\item line 72: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+String listName = iterateSectionElement.getAttribute("list");
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 77: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+String entryName = iterateSectionElement.getAttribute("entry");
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 82: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+String keyName = iterateSectionElement.getAttribute("key"); 
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 89: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+int viewSize = DEFAULT_PAGE_SIZE;
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 90: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+String viewSizeStr = iterateSectionElement.getAttribute("view-size");
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 95: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+List<? extends Element> childElementList = 
+UtilXml.childElementList(iterateSectionElement);
+\end{lstlisting}
+\end{itemize}
+\vspace{0.5cm}
+
+
+For the renderWidgetString method() :\\
+\vspace{0.5cm}
+\begin{itemize}
+\item line 146:  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+int startPageNumber = WidgetWorker.getPaginatorNumber(context); 
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 171: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+Iterator<?> iter = theList.iterator();
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 172: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+int itemIndex = -1;
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 173: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+int iterateIndex = 0;
+\end{lstlisting}
+\end{itemize}
+\vspace{0.5cm}
+
+
+
+
+
+
+\subsection{Method Calls}
+\textbf{34. Check that parameters are presented in the correct order.}\\
+\vspace{0.5cm}
+All parameters are sent by methods in the right order\\
+\vspace{0.5cm}
+
+
+\textbf{35. Check that the correct method is being called, or should it be a dif- ferent method with a similar name.}\\
+\vspace{0.5cm}
+All methods calls are correct\\
+\vspace{0.5cm}
+
+\textbf{36. Check that method returned values are used properly.}\\
+\vspace{0.5cm}
+All the items returned by method calls are coherent with the expected values \\
+\vspace{0.5cm}
+
+
+
+
+\subsection{Arrays}
+\textbf{Check that there are no off-by-one errors in array indexing (that is, all required array elements are correctly accessed through the index).}\\
+\vspace{0.5cm}
+Arrays are not scanned by loops. The only array instance is found at   line 135:\\
+\vspace{0.5cm}
+\begin{lstlisting}
+Object [] a = entrySet.toArray();       
+\end{lstlisting}
+\vspace{0.5cm}
+created from a collection of elements (entrySet in this case) and returned  by the toArray method of Java, which, as the documentation reports, prevents from bad indexing\\
+\vspace{0.5cm}
+''[The returned array] will be "safe" in that no references to it are maintained by this set. (In other words, this method must allocate a new array even if this set is backed by an array). The caller is thus free to modify the returned array.''\\
+\vspace{0.5cm}
+ Eventually, it is transformed into a List and is not directly accessed \\
+ \vspace{0.5cm}    
+ \begin{lstlisting}                 
+theList = Arrays.asList(a);
+\end{lstlisting}
+\vspace{0.5cm}
+
+\textbf{Check that all array (or other collection) indexes have been prevented from going out-of-bounds.}\\
+\vspace{0.5cm}
+Every time a collection is created or accessed, there are instructions that check if it is null. \\
+\vspace{0.5cm}
+For example the listNameExdr is initialized at line 76 calling the getInstance() method of the FlxibleMapAccessor class:\\
+\vspace{0.5cm}
+\begin{lstlisting}
+this.listNameExdr = FlexibleMapAccessor.getInstance(listName); 
+\end{lstlisting}
+\vspace{0.5cm}
+the getInstence method is reported below (lines 87-97), and contains all the needed instruction to prevent a bad use for the collection:\\
+\vspace{0.5cm}
+\begin{lstlisting}
+ public static <T> FlexibleMapAccessor<T> getInstance(String original) {
+      if (UtilValidate.isEmpty(original) || "null".equals(original)) {
+         return nullFma;
+     }
+    FlexibleMapAccessor fma = fmaCache.get(original);
+     if (fma == null) {
+         fmaCache.putIfAbsent(original, new FlexibleMapAccessor(original));
+         fma = fmaCache.get(original);
+     }
+     return fma;
+ }
+\end{lstlisting}    
+ \vspace{0.5cm}   
+All Iterators correctly access collections and sets defined.  \\ 
+\vspace{0.5cm}
+    
+ \textbf{39. Check that constructors are called when a new array item is desired.}
+ \vspace{0.5cm}
+ Every time a collection or array is desired, the right constructor is called.\\
+ \vspace{0.5cm}
+
+
+
+
+
+\subsection{Object Comparison}
+\textbf{Check that all objects (including Strings) are compared with equals and not with ==.}\\
+\vspace{0.5cm}
+
+Some issues of bad comparison are to b found as follows:\\
+\vspace{0.5cm}
+
+\begin{itemize}
+\item  line 128:  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+if (obj == null) {
+\end{lstlisting}
+\vspace{0.5cm}
+bad comparison for object obj declard at line 127 as\\
+\vspace{0.5cm}
+\begin{lstlisting}
+Object obj = listNameExdr.get(context);
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 209:  \\
+\vspace{0.5cm}
+\begin{lstlisting}
+if (globalCtx != null) {
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 214: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+if (globalCtx != null) {
+\end{lstlisting}
+\vspace{0.5cm}
+bad comparison for objectglobalCtx objct declared at line  208:\\
+\vspace{0.5cm}
+\begin{lstlisting}
+Map<String, Object> globalCtx = 
+UtilGenerics.checkMap(context.get("globalContext"));
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+
+\item line 245: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+if (targetService == null) {
+\end{lstlisting}
+\vspace{0.5cm}
+bad comparison for String targetService, declard at line 244 as:\\
+\vspace{0.5cm}
+\begin{lstlisting}
+String targetService = this.getPaginateTarget(context);
+\end{lstlisting}
+
+\end{itemize}
+\vspace{0.5cm}
+
+
+
+\subsection{Output Format}
+\textbf{41. Check that displayed output is free of spelling and grammatical errors.}\\
+\vspace{0.5cm}
+There is no displayed output\\
+\vspace{0.5cm}
+
+\textbf{42. Check that error messages are comprehensive and provide guidance as to how to correct the problem.}\\
+\vspace{0.5cm}
+All error messages written in the log are comprehensive and clear, for example:\\
+\vspace{0.5cm}
+
+\begin{itemize}
+
+\item line 129: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+Debug.logError("No object found for listName:" +
+ listNameExdr.toString(), module);
+\end{lstlisting}
+\vspace{0.5cm}
+
+\item line 263: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+Debug.logWarning("TargetService is empty.", module);
+\end{lstlisting}
+\end{itemize}
+\vspace{0.5cm}
+
+\textbf{except for line 218:}\\
+\vspace{0.5cm}
+\begin{lstlisting}
+
+Debug.logError(e, module); 
+\end{lstlisting}
+\vspace{0.5cm}
+where no meaningful message is written\\
+\vspace{0.5cm}
+
+\textbf{43. Check that the output is formatted correctly in terms of line stepping and spacing.}\\
+\vspace{0.5cm}
+All output format is formatted correctly\\
+\vspace{0.5cm}
+
+
+
+
+
+
+\subsection{Computation, Comparisons and Assignments}
+\textbf{44. Check that the implementation avoids brutish programming:}\\
+\vspace{0.5cm}
+There is no brutish programming, for instance, when managing the page numbering (lines 201-205), instructions are self-explanatory: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+   if ((itemIndex + 1) < highIndex) {
+            highIndex = itemIndex + 1;
+        }
+        actualPageSize = highIndex - lowIndex;
+   \end{lstlisting}     
+     \vspace{0.5cm}   
+        
+\textbf{45. Check order of computation/evaluation, operator precedence and parenthesizing.}  \\
+\vspace{0.5cm}
+All operators precedences are respected, parenthesys are correctly used when concatenations of method calls are done \\
+\vspace{0.5cm}
+   
+   
+   
+\textbf{46: Check the liberal use of parenthesis is used to avoid operator precedence problems.}    \\
+\vspace{0.5cm}
+All needed parenthesys are correctly used to avoid issues that come from operator precedences\\
+\vspace{0.5cm}
+
+
+\textbf{47. Check that all denominators of a division are prevented from being zero.} \\
+\vspace{0.5cm}
+There are no divisions.\\
+\vspace{0.5cm}
+
+
+\textbf{48. Check that integer arithmetic, especially division, are used appropriately to avoid causing unexpected truncation/rounding.}\\
+\vspace{0.5cm}
+No arithmetic operation cause problems of truncation or unexpected rounding.\\
+\vspace{0.5cm}
+
+
+\textbf{49. Check that the comparison and Boolean operators are correct.}  \\
+\vspace{0.5cm}
+All boolean comparisons are correct\\
+\vspace{0.5cm}
+
+
+\textbf{50: Check throw-catch expressions, and check that the error condition is actually legitimate.}\\
+\vspace{0.5cm}
+All throw and catch expressions are used properly (only if needed, and the error conditions are legitimate)\\
+\vspace{0.5cm}
+
+\textbf{51. Check that the code is free of any implicit type conversions.}\\
+\vspace{0.5cm}
+All types conversion are correctly done, explicitly using built in java methods such as toString(), parseInt,() toArray(), asList(). For example:\\
+\vspace{0.5cm}
+\begin{itemize}
+\item line153: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+viewIndex = Integer.parseInt(viewIndexString);
+\end{lstlisting}
+\vspace{0.5cm}
+\item line 135: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+Object [] a = entrySet.toArray();    
+\end{lstlisting}     
+\vspace{0.5cm}                              
+\item line 136: \\
+\vspace{0.5cm}
+\begin{lstlisting}
+theList = Arrays.asList(a);
+\end{lstlisting}
+\end{itemize}
+\vspace{0.5cm}
+Anyway some bad casting is inside mthods that belong to the  FlexiblMapAccessor class:\\
+\vspace{0.5cm}
+\begin{itemize}
+\item line142\\
+\vspace{0.5cm}
+\begin{lstlisting}
+ Map<String, Object> writableMap = 
+ (Map<String, Object>) base;
+ \end{lstlisting}
+ \vspace{0.5cm}
+(see also the comment at line 141)\\
+\vspace{0.5cm}
+\begin{lstlisting}
+// This method is a hot spot, so placing the cast here 
+instead of in another class.
+\end{lstlisting}
+\vspace{0.5cm}
+\end{itemize}
+
+
+
+\subsection{Exceptions}
+
+\textbf{2. Check that the relevant exceptions are caught.}\\
+\vspace{0.5cm}
+All relevant exceptions are caught. \\
+\vspace{0.5cm}
+
+\textbf{53. Check that the appropriate action are taken for each catch block.}\\
+\vspace{0.5cm}
+
+The catch block at lines 217-220 propagates the exception without writing any relevant message on the log\\
+\vspace{0.5cm}
+\begin{lstlisting}
+ } catch (IOException e) {
+                Debug.logError(e, module);
+                throw new RuntimeException(e.getMessage());
+            }
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+
+
+\subsection{Flow of Control}
+\textbf{54. In a switch statement, check that all cases are addressed by break or return.}\\
+\vspace{0.5cm}
+There are no switch statements.\\
+\vspace{0.5cm}
+\textbf{55. Check that all switch statements have a default branch}\\
+\vspace{0.5cm}
+There are no switch statements.\\
+\vspace{0.5cm}
+
+\textbf{56. Check that all loops are correctly formed, with the appropriate initialization, increment and termination expressions.}\\
+\vspace{0.5cm}
+All loops are formed correctly, for example the for loop at lines 100-103 that cycles among the elements of the list childElementList:\\
+\vspace{0.5cm}
+ \begin{lstlisting}         
+for (Element sectionElement: childElementList) {
+  ModelScreenWidget.Section section = 
+  new ModelScreenWidget.Section(modelScreen, sectionElement, false);
+   sectionList.add(section);
+            
+}
+\end{lstlisting}
+\vspace{0.5cm}
+or the while at lines 174-199 that cycles over the elements of the list  theList with the use of an iterator:\\
+\vspace{0.5cm}
+
+\begin{lstlisting}
+Iterator<?> iter = theList.iterator();
+[..]
+while (iter.hasNext()) {
+[..]
+}
+\end{lstlisting}
+\vspace{0.5cm}
+
+\subsection{Files}
+
+\textbf{57. Check that all files are properly declared and opened.}\\
+\vspace{0.5cm}
+The method renderNextPrev of the IterateSectionWidget  class modifies an HTML file, but it receives the appendable writer object as input, and it does not have to open or close the file itself, since these actions are performed elsewhere in the source code.
+Thus there are no issues concerning files opening, closing, EOF conditions or exceptions.\\
+\vspace{0.5cm}
+
+
+\textbf{58. Check that all files are closed properly, even in the case of an error.}\\
+\vspace{0.5cm}
+See (57)\\
+\vspace{0.5cm}
+
+\textbf{59. Check that EOF conditions are detected and handled correctly.}\\
+\vspace{0.5cm}
+See (57)\\
+\vspace{0.5cm}
+
+\textbf{60. Check that all file exceptions are caught and dealt with accordingly.}\\
+See (57)\\
+\vspace{0.5cm}
+\vspace{0.5cm}
+
+
+
+
+
+\section{Other Issues}
+\vspace{0.5cm}
+There are no other issues in addition to the ones encountered and reported in section 3\\
+\vspace{0.5cm}
+
+
+
+\section{Effort Spent}
+
+The following table shows the total number of hours spent  working on the whole project for both members of our group.
+
+
+  \begin{center}
+    \begin{tabular}{ | p{2cm} | p{5cm} | p{5cm} |}
+    \hline
+
+      \textbf{Document} & \textbf{Michelangelo Medori} &  \textbf{Joshua Nicolay Ortiz Osorio}  \\ 
+    \hline
+    
+    RASD & 28  & 30\\
+    \hline
+    DD & 22 & 20\\
+       \hline
+    ITPD & 30 & 30 \\
+       \hline
+    PP & 15 & 15 \\
+       \hline
+    CID & 10 & 10 \\
+     
+  \hline
+  \textbf{TOTAL} & \textbf{105} & \textbf{105}\\
+\hline
+  
+    \end{tabular}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \end{flushleft}
+\end{document}
