@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  7 FEB 2017 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  7 FEB 2017 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -81,7 +81,7 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-No file DD3.0.aux.
+(./DD3.0.aux)
 \openout1 = `DD3.0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -96,6 +96,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
+
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
@@ -207,45 +208,46 @@ Overfull \hbox (81.79613pt too wide) in paragraph at lines 172--173
 File: graficidd/HLComponent.png Graphic file (type png)
 
 <use graficidd/HLComponent.png>
-Package pdftex.def Info: graficidd/HLComponent.png used on input line 198.
+Package pdftex.def Info: graficidd/HLComponent.png used on input line 199.
 (pdftex.def)             Requested size: 426.8039pt x 284.53844pt.
 
-Overfull \hbox (81.8039pt too wide) in paragraph at lines 198--199
+Overfull \hbox (81.8039pt too wide) in paragraph at lines 199--200
 [][]  
  []
 
 [6 <./graficidd/HLComponent.png>] [7]
-<graficidd/component.png, id=35, 1437.37pt x 753.81625pt>
-File: graficidd/component.png Graphic file (type png)
+<graficidd/FinalComponentView.png, id=35, 1437.37pt x 918.43124pt>
+File: graficidd/FinalComponentView.png Graphic file (type png)
 
-<use graficidd/component.png>
-Package pdftex.def Info: graficidd/component.png used on input line 222.
-(pdftex.def)             Requested size: 431.21432pt x 226.14662pt.
+<use graficidd/FinalComponentView.png>
+Package pdftex.def Info: graficidd/FinalComponentView.png used on input line 22
+3.
+(pdftex.def)             Requested size: 431.21432pt x 275.5315pt.
 
-Overfull \hbox (86.21432pt too wide) in paragraph at lines 222--223
+Overfull \hbox (86.21432pt too wide) in paragraph at lines 223--224
 []  
  []
 
-<graficidd/deployment.png, id=36, 1322.9425pt x 733.74126pt>
+[8 <./graficidd/FinalComponentView.png>]
+<graficidd/deployment.png, id=39, 1322.9425pt x 733.74126pt>
 File: graficidd/deployment.png Graphic file (type png)
 
 <use graficidd/deployment.png>
-Package pdftex.def Info: graficidd/deployment.png used on input line 242.
+Package pdftex.def Info: graficidd/deployment.png used on input line 243.
 (pdftex.def)             Requested size: 396.88582pt x 220.12407pt.
 
-Overfull \hbox (51.88582pt too wide) in paragraph at lines 242--243
+Overfull \hbox (51.88582pt too wide) in paragraph at lines 243--244
 []  
  []
 
-[8 <./graficidd/component.png>]
 <graficidd/seq1_login.png, id=40, 1001.7425pt x 1576.89125pt>
 File: graficidd/seq1_login.png Graphic file (type png)
 
 <use graficidd/seq1_login.png>
-Package pdftex.def Info: graficidd/seq1_login.png used on input line 251.
+Package pdftex.def Info: graficidd/seq1_login.png used on input line 252.
 (pdftex.def)             Requested size: 400.6899pt x 630.74533pt.
 
-Overfull \hbox (55.6899pt too wide) in paragraph at lines 251--252
+Overfull \hbox (55.6899pt too wide) in paragraph at lines 252--253
 []  
  []
 
@@ -258,11 +260,11 @@ Overfull \vbox (98.20364pt too high) has occurred while \output is active []
 File: graficidd/seq2_reservation.png Graphic file (type png)
 
 <use graficidd/seq2_reservation.png>
-Package pdftex.def Info: graficidd/seq2_reservation.png used on input line 263.
+Package pdftex.def Info: graficidd/seq2_reservation.png used on input line 264.
 
 (pdftex.def)             Requested size: 455.00339pt x 398.69258pt.
 
-Overfull \hbox (110.00339pt too wide) in paragraph at lines 263--264
+Overfull \hbox (110.00339pt too wide) in paragraph at lines 264--265
 [][]  
  []
 
@@ -271,7 +273,7 @@ Overfull \hbox (110.00339pt too wide) in paragraph at lines 263--264
 File: graficidd/seq3_start_ride.png Graphic file (type png)
 
 <use graficidd/seq3_start_ride.png>
-Package pdftex.def Info: graficidd/seq3_start_ride.png used on input line 281.
+Package pdftex.def Info: graficidd/seq3_start_ride.png used on input line 282.
 (pdftex.def)             Requested size: 284.3115pt x 607.01633pt.
 
 Overfull \vbox (57.01633pt too high) has occurred while \output is active []
@@ -282,7 +284,7 @@ Overfull \vbox (57.01633pt too high) has occurred while \output is active []
 File: graficidd/seq4_accident.png Graphic file (type png)
 
 <use graficidd/seq4_accident.png>
-Package pdftex.def Info: graficidd/seq4_accident.png used on input line 290.
+Package pdftex.def Info: graficidd/seq4_accident.png used on input line 291.
 (pdftex.def)             Requested size: 289.58116pt x 607.26727pt.
 
 Overfull \vbox (57.26727pt too high) has occurred while \output is active []
@@ -293,199 +295,198 @@ Overfull \vbox (57.26727pt too high) has occurred while \output is active []
 File: graficidd/interface.png Graphic file (type png)
 
 <use graficidd/interface.png>
-Package pdftex.def Info: graficidd/interface.png used on input line 300.
+Package pdftex.def Info: graficidd/interface.png used on input line 301.
 (pdftex.def)             Requested size: 341.97931pt x 163.40134pt.
  [18 <./graficidd/interface.png>] [19]
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 358--361
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 359--362
 [][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 361.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 362.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 361.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 362.
 
-Overfull \hbox (123.00476pt too wide) in paragraph at lines 364--365
+Overfull \hbox (123.00476pt too wide) in paragraph at lines 365--366
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (63.00415pt too wide) in paragraph at lines 368--369
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 369--370
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.00354pt too wide) in paragraph at lines 373--374
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 374--375
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 379--380
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 380--381
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.00354pt too wide) in paragraph at lines 380--381
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 381--382
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.00452pt too wide) in paragraph at lines 383--384
+Overfull \hbox (99.00452pt too wide) in paragraph at lines 384--385
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (69.00421pt too wide) in paragraph at lines 384--385
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 385--386
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [20]
-Overfull \hbox (21.00372pt too wide) in paragraph at lines 398--399
+Overfull \hbox (21.00372pt too wide) in paragraph at lines 399--400
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 400--401
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 401--402
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.00354pt too wide) in paragraph at lines 401--402
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 402--403
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.00452pt too wide) in paragraph at lines 404--405
+Overfull \hbox (99.00452pt too wide) in paragraph at lines 405--406
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (69.00421pt too wide) in paragraph at lines 405--406
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 406--407
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (63.00415pt too wide) in paragraph at lines 410--411
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 411--412
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.00378pt too wide) in paragraph at lines 411--412
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 412--413
 [][][][][][][][][][][][][][][][][] 
  []
 
 [21]
-Overfull \hbox (21.00372pt too wide) in paragraph at lines 446--447
+Overfull \hbox (21.00372pt too wide) in paragraph at lines 447--448
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.00354pt too wide) in paragraph at lines 458--459
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 459--460
 [][][][][][][][][][][][][][][][] 
  []
 
 [22]
-Overfull \hbox (93.00446pt too wide) in paragraph at lines 477--478
+Overfull \hbox (93.00446pt too wide) in paragraph at lines 478--479
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 484--485
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 485--486
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.00354pt too wide) in paragraph at lines 485--486
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 486--487
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (105.00458pt too wide) in paragraph at lines 488--489
+Overfull \hbox (105.00458pt too wide) in paragraph at lines 489--490
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (75.00427pt too wide) in paragraph at lines 489--490
+Overfull \hbox (75.00427pt too wide) in paragraph at lines 490--491
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 492.
+(Font)              <7> on input line 493.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 492.
+(Font)              <5> on input line 493.
 
-Overfull \hbox (69.00421pt too wide) in paragraph at lines 497--498
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 498--499
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (117.0047pt too wide) in paragraph at lines 520--521
+Overfull \hbox (117.0047pt too wide) in paragraph at lines 521--522
 [][][][][][][][][][][][][][][][][] 
  []
 
 [23]
-Overfull \hbox (123.00476pt too wide) in paragraph at lines 523--524
+Overfull \hbox (123.00476pt too wide) in paragraph at lines 524--525
 [][][][][][][][][][][][][][][][][] 
  []
 
-[24]
-<graficidd/UxRegistrationReservation.png, id=102, 1008.74466pt x 618.05304pt>
-File: graficidd/UxRegistrationReservation.png Graphic file (type png)
+[24] <graficidd/FinalUserUx.png, id=102, 1146.49129pt x 688.87764pt>
+File: graficidd/FinalUserUx.png Graphic file (type png)
 
-<use graficidd/UxRegistrationReservation.png>
-Package pdftex.def Info: graficidd/UxRegistrationReservation.png used on input 
-line 540.
-(pdftex.def)             Requested size: 426.79448pt x 341.43913pt.
+<use graficidd/FinalUserUx.png>
+Package pdftex.def Info: graficidd/FinalUserUx.png used on input line 541.
+(pdftex.def)             Requested size: 343.95004pt x 206.66487pt.
 
-Overfull \hbox (81.79448pt too wide) in paragraph at lines 540--541
+<graficidd/FinalOperatorUx.png, id=103, 668.4975pt x 424.65852pt>
+File: graficidd/FinalOperatorUx.png Graphic file (type png)
+
+<use graficidd/FinalOperatorUx.png>
+Package pdftex.def Info: graficidd/FinalOperatorUx.png used on input line 546.
+(pdftex.def)             Requested size: 334.24792pt x 212.32874pt.
+ [25 <./graficidd/FinalUserUx.png> <./graficidd/FinalOperatorUx.png>]
+<graficidd/FinalBCE.png, id=107, 1484.57034pt x 876.34602pt>
+File: graficidd/FinalBCE.png Graphic file (type png)
+
+<use graficidd/FinalBCE.png>
+Package pdftex.def Info: graficidd/FinalBCE.png used on input line 552.
+(pdftex.def)             Requested size: 445.37454pt x 262.90584pt.
+
+Overfull \hbox (100.37454pt too wide) in paragraph at lines 552--554
 [][] 
  []
 
-<graficidd/operatorux.png, id=103, 506.6127pt x 424.65852pt>
-File: graficidd/operatorux.png Graphic file (type png)
-
-<use graficidd/operatorux.png>
-Package pdftex.def Info: graficidd/operatorux.png used on input line 545.
-(pdftex.def)             Requested size: 426.80406pt x 341.43144pt.
-
-Overfull \hbox (81.80406pt too wide) in paragraph at lines 545--546
-[][]  
+[26 <./graficidd/FinalBCE.png>] [27] [28] [29] [30]
+Underfull \hbox (badness 1178) in paragraph at lines 779--781
+[]\OT1/cmr/m/n/10 fixed de-scrip-tions of se-
  []
 
-[25 <./graficidd/UxRegistrationReservation.png>] [26 <./graficidd/operatorux.pn
-g>] <graficidd/BCE.png, id=110, 1444.6773pt x 876.34602pt>
-File: graficidd/BCE.png Graphic file (type png)
 
-<use graficidd/BCE.png>
-Package pdftex.def Info: graficidd/BCE.png used on input line 551.
-(pdftex.def)             Requested size: 426.79335pt x 341.4259pt.
-
-Overfull \hbox (81.79335pt too wide) in paragraph at lines 551--553
-[][] 
+Overfull \hbox (129.7913pt too wide) in paragraph at lines 767--785
+ [] 
  []
 
-[27 <./graficidd/BCE.png>] [28] [29] [30] [31] [32] (./DD3.0.aux) ) 
+[31] (./DD3.0.aux) ) 
 Here is how much of TeX's memory you used:
- 2756 strings out of 493014
- 41176 string characters out of 6133350
+ 2758 strings out of 493014
+ 41221 string characters out of 6133350
  123529 words of memory out of 5000000
  6286 multiletter control sequences out of 15000+600000
  5158 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,32p,1937b,1473s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on DD3.0.pdf (33 pages, 3122625 bytes).
+ 38i,8n,32p,1937b,1473s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb>
+Output written on DD3.0.pdf (32 pages, 3367317 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

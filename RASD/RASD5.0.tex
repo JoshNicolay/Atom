@@ -104,6 +104,7 @@ Michelangelo Medori \ Matr: 878025
 \item [6.1] Future Development
 \item [6.2] Used Tools
 \item [6.3] Hours of Work
+\item [6.4] Revision History
 
 \end {enumerate} 
 
@@ -210,34 +211,34 @@ Both of them need to be registered into the system.?Operators work at the chargi
 \subsection{Goals (Product Functions)} %GOALS
 \flushleft{ \textbf{Users:}}\\
 \begin{enumerate}
-\item The system shall allow users to register via the web or mobile app by inserting all the required information %G!
-\item The system shall allow users to log in%G2
-\item The system shall allow users to view the information about the history of rides and reservations they have made %G3 
-\item The system shall allow users to see the positions of all the available cars on a map%G4
-\item The system shall allow users to make a reservation for an available car%G5
-\item The system shall allow users who reserved a car to cancel the reservation%G6
-\item  The system shall allow users to unlock the car they reserved%G7
-\item The system shall allow users to communicate if the car they reserved is damaged or issues are found (e.g. dirt, damages, etc.)%G8
-\item The system shall allow users to start the ride if they don't find any issue on the car they want to ride%G9
-\item The system shall compute and display the shortest path from the user current position to a given location via the on-board computer%G10
-\item The System shall allow users to make a pit stop of maximum 60 minutes%G11
-\item Th system shall compute and display the shortest path from the user's current position to the nearest available special parking lot, if rqeuested by the user itself%G12
-\item The system shall allow users to report an accident via the on-board computer %G13
-\item The system shall allow users to end the ride %G14
+\item [G1] The system shall allow users to register via the web or mobile app by inserting all the required information %G!
+\item [G2] The system shall allow users to log in%G2
+\item [G3] The system shall allow users to view the information about the history of rides and reservations they have made %G3 
+\item [G4] The system shall allow users to see the positions of all the available cars on a map%G4
+\item [G5] The system shall allow users to make a reservation for an available car%G5
+\item [G6] The system shall allow users who reserved a car to cancel the reservation%G6
+\item [G7] The system shall allow users to unlock the car they reserved%G7
+\item [G8] The system shall allow users to communicate if the car they reserved is damaged or issues are found (e.g. dirt, damages, etc.)%G8
+\item [G9] The system shall allow users to start the ride if they don't find any issue on the car they want to ride%G9
+\item [G10] The system shall compute and display the shortest path from the user current position to a given location via the on-board computer%G10
+\item [G11] The System shall allow users to make a pit stop of maximum 60 minutes%G11
+\item [G12] The system shall compute and display the shortest path from the user's current position to the nearest available special parking lot, if rqeuested by the user itself%G12
+\item [G13] The system shall allow users to report an accident via the on-board computer %G13
+\item [G14] The system shall allow users to end the ride %G14
 
-\item The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which takes care of the payment%G15
-
+\item [G15] The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which takes care of the payment%G15
 
 \end{enumerate}
 
 
+
 \flushleft{ \textbf{Operators:}}\\
 \begin{enumerate}
-\item The system shall allow operators to log into a dedicated area . %G16
-\item The system shall allow operators to view the updated status and position of every car on a list%G17
-\item The system shall allow operators to view the cars currently being assisted by other operators on a dedicated list accessible from the operator's reserved area%G18
-\item The system shall allow operators to be able to select a car from the list in order to take care of it.%G19
-\item The system allow an operator who took care of a car to communicate that the issues are resolved to all the other operators%G20
+\item [G16] The system shall allow operators to log into a dedicated area . %G16
+\item [G17] The system shall allow operators to view the updated status and position of every car on a list%G17
+\item [G18] The system shall allow operators to view the cars currently being assisted by other operators on a dedicated list accessible from the operator's reserved area%G18
+\item [G19] The system shall allow operators to be able to select a car from the list in order to take care of it.%G19
+\item [G20 ]The system allow an operator who took care of a car to communicate that the issues are resolved to all the other operators%G20
 
 \end{enumerate}
 
@@ -266,9 +267,9 @@ Both of them need to be registered into the system.?Operators work at the chargi
 \item Users will not try to leave cars outside the safe area.
 \item Users will not try to reserve more than a car at once
 \item The credit card  used by the users always has enough money to pay for the rides
-\item  special parking lots are equipped with sensors in order for the system to know how many cars are parked inside it and how many power grids are available at any time.
+\item  Special parking lots are equipped with sensors in order for the system to know how many cars are parked inside it and how many power grids are available at any time.
 \item Users will always leave the car with the windows closed, handbrake activated, lights  and radio off and all the documents stored in their right place  at the end of every ride
-\item Users will always instantly receive, after they end a ride, the information about the ride itself via e-mail and the mobile app. These information include time and money  spent, distance traveled , etc
+\item Users will always instantly receive, after they end a ride, the information about the ride itself via e-mail. These information include time and money  spent, distance traveled , etc
 \item All the payments are correctly performed at the end of every ride
 \item In case of issues on a car, users always notice them and notify it to the system before starting the ride
 \item If an operator taps the button ''OPERATE'' associated to an issued car, he actually performs all the needed actions in order to fix that car within 4 hours , and always remembers to tap the button ''ISSUE SOLVED'' once they finished
@@ -286,7 +287,10 @@ Both of them need to be registered into the system.?Operators work at the chargi
 \item Operators have a special contact-less card they can use to unlock the cars, acquired at the moment of the registration into the system
 \item Operators can drive any car unlocking them via the special contact-less card, and without  paying for the ride
 \item In case of accident the user always takes care of stopping the car in some place where it does not create problems to the traffic flow, never panics, fills the CID modules (according to Italian laws)  and remains in the place where the accident happened until the arrive of the operator
-\item an e-mail is always sent from the system to a user after he registered into the system, and any time he reserves a car or end a ride. The e-mail notifications are managed by an already existing notification system. 
+\item an e-mail is always sent from the system to a user after he registered into the system, and any time he reserves a car , cancel a reservation or end a ride. The e-mail notifications are managed by an already existing notification system. 
+\item Users always turn off the car engine before ending the ride or starting a pitstop
+\item After starting a pit-stop, user can communicate to the system that they are leaving the car clicking on a button  '' LEAVE CAR'' on the on-board computer. If they do press that button, they always actually get off the car, within a minute, and the car locks itself after 2 minutes.  
+\item Users will never try to leave the car taking the car key with them. The car key always stays plugged in.
 \item In case users leave any kind of items into the cars after ending the ride, they can inform operators about that via a phone call, and operators will pick their stuff; users will collect it in one of the charging station
 
 \end{itemize}
@@ -544,45 +548,34 @@ The system will interface with a new  MySQL database. All the information about 
 
 
 \subsection{Mockups} %MOCKUPS
-\subsubsection {\textbf{User's log in / Operator's log in} }
-\includegraphics[width=8cm, height=6cm]{m1}
-\includegraphics[width=8cm, height=6cm]{m2}  
+\subsubsection {\textbf{User's Home page / Operator's Home page} }
+\includegraphics[scale=0.3]{Desktop_User}
+\includegraphics[scale=0.3]{Desktop_OP}  
 
-\subsubsection {\textbf{Users Registration/ Users Home Page / Reservation Countdown} }
-\includegraphics[width=8cm, height=6cm]{m3}
-\includegraphics[width=8cm, height=6cm]{m4}  
-\includegraphics[width=8cm, height=6cm]{m5}  
 
-\subsubsection {\textbf{Operator's Home Page} }
-\includegraphics[width=8cm, height=6cm]{m6}
+\subsubsection {\textbf{Mobile: User registration / User Log in} }
+\includegraphics[scale=0.5]{Page4}
+\includegraphics[scale=0.5]{Page3} 
 
-\subsubsection {\textbf{Mobile: User log in / User Home Page} }
-\includegraphics[scale=0.5]{mm1}
-\includegraphics[scale=0.5]{mm2} 
+\subsubsection {\textbf{Mobile: User Home page }}
+\includegraphics[scale=0.5]{Page1}
+\includegraphics[scale=0.5]{Page2} 
 
-\subsubsection {\textbf{Mobile: Reservation Countdown / Operators Home Page} }
-\includegraphics[scale=0.5]{mm3}
-\includegraphics[scale=0.5]{mm4} 
+\subsubsection {\textbf{Mobile: Operators Home Page/ User Reservation page} }
+\includegraphics[scale=0.5]{carStatus_Op}
+\includegraphics[scale=0.5]{Cancel_Reservation} 
 
-\subsubsection {\textbf{On-Board Computer:  Signal Issues / Map} }
-\includegraphics[width=8cm, height=6cm]{mob1}
-\includegraphics[width=8cm, height=6cm]{mob2} 
+\subsubsection {\textbf{On-Board Computer} }
+\includegraphics[scale=0.3]{OnBoardComputer}
 
-\subsubsection {\textbf{ On-Board Computer: Start Pit Stop / End Pit Stop}}
-\includegraphics[width=8cm, height=6cm]{mob3}
-\includegraphics[width=8cm, height=6cm]{mob4} 
 
-\subsubsection {\textbf{ On-Board Computer: End the ride}}
-\includegraphics[width=8cm, height=6cm]{mob5}
-\includegraphics[width=8cm, height=6cm]{mob6} 
 
-\subsubsection {\textbf{ On-Board Computer: Report accident}}
-\includegraphics[width=8cm, height=6cm]{mob7}
 
 \section{UML Models} %UML MODELS
 \subsection{Use case Diagram} %USE CASE
-\includegraphics[width=10cm, height=10cm]{usecase}
-\textbf{ Use case Description}\\
+\includegraphics[scale=0.5]{FinalUseCase}
+\newpage
+\textbf{Use case Description}\\
 In this paragraph some use cases will be described. These use cases can be derived from the scenarios and the use case diagram. \\
 
 
@@ -600,7 +593,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
   \hline
     Entry Conditions & The user must be registered into the system \\ 
     \hline
-    Flow of events & \begin{itemize}  \item A user opens the user?s log in page in the web or mobile app   \item The user inputs his credentials, consisting of a username and a password \item The user clicks on the ''LOG IN''  button \item The system checks that the credentials are valid (they are associated to an existing user) and redirects the user to the User?s Home page \end {itemize}  \\
+    Flow of events & \begin{itemize}  \item A user opens the user's log in page in the web or mobile app   \item The user inputs his credentials, consisting of a username and a password \item The user clicks on the ''LOG IN''  button \item The system checks that the credentials are valid (they are associated to an existing user) and redirects the user to the User's Home page \end {itemize}  \\
     \hline
     Exit conditions & The user is redirected to the User?s home page.\\
     \hline
@@ -608,6 +601,9 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     \end{tabular}
 \end{center}
+
+
+
 
 
 \begin{center}
@@ -622,20 +618,52 @@ In this paragraph some use cases will be described. These use cases can be deriv
     Actors & User
   \\ 
   \hline
-    Entry Conditions &  \\ 
+    Entry Conditions & The user must have correctly performed the log in \\ 
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  The user can visualize from the user?s home page, directly accessible from the login page, a map of Milan?s urban area, where are enlighten the current geographical positions of all the available cars 
+      \item  The user can visualize from the user's home page, directly accessible from the login page, a map of Milan's urban area, where are enlighten the current geographical positions of all the available cars 
      
        \end {itemize}  \\
     \hline
     Exit conditions & The user is now aware of the positions of all the available cars (i.e. cars which can be reserved)\\
     \hline
+    Exceptions & if the user has an on-going reservation or ride, the map is not shown. The reservation or ride page is shown instead\\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm}  |}
+    \hline
+    \textbf{Name} &  \textbf{User visualizes a list of his past reservations and rides} \\ 
+    \hline
+    
+    Description & A user visualizes the history of his reservations and rdes
+     \\ 
+     \hline
+    Actors & User
+  \\ 
+  \hline
+    Entry Conditions & The user must have correctly performed the log in \\ 
+    \hline
+    Flow of events &
+     \begin{itemize} 
+      \item  The user can access, clicking on a link from the user's home page, a page where a list of all his previous reservations and rides is shown     
+       \end {itemize}  \\
+    \hline
+    Exit conditions & The user can access all information about his past reservations and rides\\
+    \hline
     Exceptions & none\\
     \hline
     \end{tabular}
 \end{center}
+
+
+
 
 
 \begin{center}
@@ -654,15 +682,15 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  The user inputs a geographical location (consisting of a street/postal code/building etc.) into an input area at the bottom of the user?s home page
-       \item  The user clicks on the ?SUBMIT? button
+      \item  The user inputs a geographical location (consisting of a street/postal code/building etc.) into an input area at the bottom of the user's home page
+       \item  The user clicks on the ''SUBMIT'' button
        \item The system dynamically changes the geographical area shown on the map,  in order to highlight the cars within 1 km from the location inserted by the user
        \item  
        \end {itemize}  \\
     \hline
     Exit conditions & The user can now see highlighted on the map the cars near the location he inserted\\
     \hline
-    Exceptions & The user can now see highlighted on the map the cars near the location he inserted \\
+    Exceptions & if the location is not recognized, the map does not change, and an error message is shown. \\
     \hline
     \end{tabular}
 \end{center}
@@ -674,19 +702,19 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \textbf{Name} &  \textbf{Car reservation} \\ 
     \hline
     
-    Description & The user can now see highlighted on the map the cars near the location he inserted
+    Description & The user reserves a car
      \\ 
      \hline
     Actors & User
   \\ 
   \hline
-    Entry Conditions &  The user can now see highlighted on the map the cars near the location he inserted\\ 
+    Entry Conditions &  The user can now see highlighted on the map the cars near the location he inserted, or the whole list of cars, in case he didn't insert any location\\ 
     \hline
     Flow of events &
      \begin{itemize} 
       \item  The user select a car on the map, among the available cars shown.
-       \item  The system shows a ?RESERVE CAR" button near the selected car
-       \item The user clicks on the ?RESERVE CAR? button
+       \item  The system shows a ''RESERVE CAR" button near the selected car
+       \item The user clicks on the ''RESERVE CAR'' button
        \item  The system reserves a car for the user, making it unavailable to others, and redirects him to the reservation page, where he can visualize a message confirming that the reservation has been successful and a timer that shows the remaining minutes before the reservation expires, the position of the car etc 
        \end {itemize}  \\
     \hline
@@ -704,7 +732,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \textbf{Name} &  \textbf{Reservation cancellation} \\ 
     \hline
     
-    Description & In case problems occur on the reservation process, an error message is shown, and the car remains available for other reservations
+    Description & A user cancels a reservation he made
      \\ 
      \hline
     Actors & User
@@ -714,14 +742,14 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  From the reservation page, the user is able to visualize a ?CANCEL RESERVATION? button
-       \item  The user clicks on the ?CANCEL RESERVATION ? button
+      \item  From the reservation page, the user is able to visualize a ''CANCEL RESERVATION'' button
+       \item  The user clicks on the''CANCEL RESERVATION'' button
        \item The system cancels the reservation, making the car available to other users
        \item  The system shows a message to inform that the reservation has been correctly cancelled
-       \item The system redirects the user to the user?s home page
+       \item The system redirects the user to the user's home page
        \end {itemize}  \\
     \hline
-    Exit conditions & The user is redirected to the User?s home page\\
+    Exit conditions & The user is redirected to the User's home page\\
     \hline
     Exceptions & None\\
     \hline
@@ -748,7 +776,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
       \item  The user places his contactless card near the car sensor before the timer expires
        \item  The system retrieves the information about the card and verifies that it corresponds to the user that reserved that car
        \item The system unlocks the car
-       \item  
+       \ 
        \end {itemize}  \\
     \hline
     Exit conditions & The user has successfully unlocked the car \\
@@ -771,7 +799,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \textbf{Name} &  \textbf{Car issue signaling} \\ 
     \hline
     
-    Description & A user communicate o the system weather there are issues on the car he reserved or not
+    Description & A user communicate to the system weather there are issues on the car he reserved or not
      \\ 
      \hline
     Actors & User
@@ -783,13 +811,13 @@ In this paragraph some use cases will be described. These use cases can be deriv
      \begin{itemize} 
       \item  The system reminds the user to check for issues on the car with a message on the onboard computer before letting the user start the ride
        \item  The user checks if there are issues and do not find any
-       \item The user taps on a button ?NO ISSUES FOUND? on the on-board computer
-       \item  The system let the user know he can start the ride with a message on the on-board computer
+       \item The user taps on a button '' ISSUES FOUND'' on the on-board computer
+       \item  The system cancels the reservation, making the car not available to the current user as well as all the others. The system tells the user to leave the car with a message on the on-board computer. The user is unable to start the ride and leaves the car. The system informs operators about the issue by marking the car as ''ASSISTANCE NEEDED''. 
        \end {itemize}  \\
     \hline
-    Exit conditions & The user can now start the ride \\
+    Exit conditions & The user has correctly signald an issue in the car he wanted to ride  to the system \\
     \hline
-    Exceptions &  If the user find issues on the car, he communicate it to the system tapping a ?ISSUES FOUND? button on the on-board computer. The system cancels the reservation, making the car not available to the current user as well as all the others. The system tells the user to leave the car with a message on the on-board computer. The user is unable to start the ride and leaves the car. The system informs operators about the issue by marking the car as ?ASSISTANCE NEEDED?. \\
+    Exceptions &  If the user finds no issues on the car, he communicate it to the system tapping a ''NO ISSUES FOUND'' button on the on-board computer, and normally start a ride\\
     \hline
     \end{tabular}
 \end{center}
@@ -811,10 +839,10 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  The user inserts and turns the car key and starts the engine
+      \item  The user turns the car key and starts the engine
        \item  The user starts to be charged by the system
        \item The user starts to be able to visualize the updated amount of money spent for the ride on the on-board computer
-       \item 
+       
        \end {itemize}  \\
     \hline
     Exit conditions & The user successfully started the ride \\
@@ -823,6 +851,42 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     \end{tabular}
 \end{center}
+
+
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm}  |}
+    \hline
+    \textbf{Name} &  \textbf{Path to destination} \\ 
+    \hline
+    
+    Description & The user inserts a location and the system shows the shortest path to reach it 
+     \\ 
+     \hline
+    Actors & User
+  \\ 
+  \hline
+    Entry Conditions & The user has successfully started a ride  \\ 
+    \hline
+    Flow of events &
+     \begin{itemize} 
+      \item  The user taps a button ''INSERT LOCATION'' on the on-board compiuter
+       \item  The user inserts a location
+       \item The system computes the shortest path from the car's current location to the destination location inserted by the user and displays it on the on-board computer
+       
+       \end {itemize}  \\
+    \hline
+    Exit conditions & The user successfully visualized the path from his current position to the desired location  \\
+    \hline
+    Exceptions & If the system does not recognise the inserted location, an error is shown and the user can try again\\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+
+
+
 
 
 \begin{center}
@@ -842,12 +906,12 @@ In this paragraph some use cases will be described. These use cases can be deriv
     Flow of events &
      \begin{itemize} 
       \item  The user parks the car and stops the engine turning the key
-       \item  The user taps on the ?START PIT STOP? button on the on-board computer
+       \item  The user taps on the ''START PIT STOP'' button on the on-board computer
        \item The user starts to be charged by the system for half the price of a normal ride 
        \item  The user can now leave the car parked for maximum 60 minutes, keeping it reserved for future use
        \item The user gets back to the car, unlocks the car placing his contactless card near the car sensor
-       \item The user taps on the ? END PIT STOP? button placed on the on-board computer
-       \item The system restarts to charge the user for the full price as soon as the user taps on the ? END PIT STOP? button , and the user is able to restart the engine and continue to ride the car
+       \item The user taps on the  ''END PIT STOP''  button placed on the on-board computer
+       \item The system restarts to charge the user for the full price as soon as the user taps on the '' END PIT STOP'' button , and the user is able to restart the engine and continue to ride the car
        \end {itemize}  \\
     \hline
     Exit conditions & The user has successfully made a pit stop\\
@@ -856,6 +920,42 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     \end{tabular}
 \end{center}
+
+
+
+
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm}  |}
+    \hline
+    \textbf{Name} &  \textbf{Path to nearest special parking lot} \\ 
+    \hline
+    
+    Description & The system shows the shortest path to reach the nearest available special parking lot 
+     \\ 
+     \hline
+    Actors & User
+  \\ 
+  \hline
+    Entry Conditions & The user has successfully started a ride  \\ 
+    \hline
+    Flow of events &
+     \begin{itemize} 
+      \item  The user taps a button ''FIND PARK'' on the on-board compiuter
+       \item  The system computes the location of the nearest available special parking lot
+       \item The system computes the shortest path from the car's current location to the destination location inserted by the user and displays it on the on-board computer.
+       
+       \end {itemize}  \\
+    \hline
+    Exit conditions & The user successfully visualized the path from his current position to the desired special parking lot  \\
+    \hline
+    Exceptions & none\\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+
 
 
 \begin{center}
@@ -875,7 +975,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
     Flow of events &
      \begin{itemize} 
       \item  The user parks the car and stops the engine turning the key
-       \item  The user taps on the ?END THE RIDE? button on the on-board computer
+       \item  The user taps on the ''END THE RIDE'' button on the on-board computer
        \item The system stops charging the user
        \item  The system reminds the user to close the windows and to leave the car in the same conditions in which he found it at the beginning of the ride with a message on the on-board computer
        \end {itemize}  \\
@@ -904,11 +1004,11 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  The user taps on the ?REPORT ACCIDENT? button on the on-board computer, which is available to press once the ride is started
+      \item  The user taps on the ''REPORT ACCIDENT'' button on the on-board computer, which is available to press once the ride is started
        \item  The system marks the car as ?accident? and at the same time makes a call start from the on-board computer to allow the user to talk to an operator in order to provide the details of the accident and receive instructions.
-       \item The operator that has been called taps on the ?OPERATE? button  on the row of the list associated to that car and provides assistance to the user.
-       \item  Once the issue is resolved , the operator taps on the ?ISSUE SOLVED? on the same row of the list.
-       \item The system marks back the car as ?NO ISSUE? 
+       \item The operator that has been called taps on the ''OPERATE'' button  on the row of the list associated to that car and provides assistance to the user.
+       \item  Once the issue is resolved , the operator taps on the ''ISSUE SOLVED'' on the same row of the list.
+       \item The system marks back the car as ''NO ISSUE'' 
        \end {itemize}  \\
     \hline
     Exit conditions & The user has successfully reported an accident to the operator, and the operator provided assistance.\\
@@ -937,13 +1037,13 @@ In this paragraph some use cases will be described. These use cases can be deriv
      \begin{itemize} 
       \item  An operator opens the operator?s log in page on the web or mobile app
        \item  The operator inputs his credentials, consisting of a username and a password
-       \item The operator clicks on the ?LOG IN? button
-       \item  The system checks that the credentials are valid (they are associated to an existing operator) and redirects the operator to the Operator?s Home page
+       \item The operator clicks on the ''LOG IN'' button
+       \item  The system checks that the credentials are valid (they are associated to an existing operator) and redirects the operator to the Operator's Home page
        \end {itemize}  \\
     \hline
     Exit conditions & The operator has successfully logged into the section of the system dedicated to operators \\
     \hline
-    Exceptions & If the credentials inserted by the operator are not valid, the system shows an error message, inviting to try again and doesn?t redirect the operator anywhere \\
+    Exceptions & If the credentials inserted by the operator are not valid, the system shows an error message, inviting to try again and doesn't redirect the operator anywhere \\
     \hline
     \end{tabular}
 \end{center}
@@ -952,7 +1052,7 @@ In this paragraph some use cases will be described. These use cases can be deriv
 \begin{center}
     \begin{tabular}{ | l | p{10cm}  |}
     \hline
-    \textbf{Name} &  \textbf{Operator views cars information and takes care of a car} \\ 
+    \textbf{Name} &  \textbf{Operator views cars information } \\ 
     \hline
     
     Description & An operator visualizes the status and position of all the cars on a list
@@ -965,10 +1065,39 @@ In this paragraph some use cases will be described. These use cases can be deriv
     \hline
     Flow of events &
      \begin{itemize} 
-      \item  The operator  visualizes from the Operator?s home page, directly accessible from the login page, a  table: each row of the table is associated to a car, and it features the position (expressed in terms of latitude and longitude, the status (consisting of  a writing among ?NO ISSUES?, ?ASSISTANCE NEEDED?, ?LOW CHARGE? and ?ACCIDENT?), the name of the user who is using the car and the ID of the car. The list also shows if other operators  already decided to take care of a car by showing a writing ?in progress? or a button ?OPERATE ?  on the rows associated to issued cars.
-       \item  An operator taps on the ?OPERATE ? button related to a car which status is ?ASSISTANCE NEEDED?, ?LOW CHARGE? or ?ACCIDENT"
-       \item After he took care of the issue,  the operator taps on the button ?ISSUE SOLVED? on the same row of the list, to communicate that the car is now back to its regular functions.
-       \item  The system marks back the car as ?NO ISSUE?  
+      \item  The operator  visualizes from the Operator?s home page, directly accessible from the login page, a  table: each row of the table is associated to a car, and it features the position (expressed in terms of latitude and longitude, the status (consisting of  a writing among ''NO ISSUES'', ''ASSISTANCE NEEDED'', ''LOW CHARGE'' and ''ACCIDENT''), the name of the user who is using the car and the ID of the car. The list also shows if other operators  already decided to take care of a car by showing a writing ''in progress'' or a button ''OPERATE ''  on the rows associated to issued cars.
+      
+       \end {itemize}  \\
+    \hline
+    Exit conditions & The operator has successfully visualized the information about all the cars.\\
+    \hline
+    Exceptions & None \\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm}  |}
+    \hline
+    \textbf{Name} &  \textbf{Oprator takes care of a car} \\ 
+    \hline
+    
+    Description & An operator takes care of an issued car that appears on the list 
+     \\ 
+     \hline
+    Actors & Operator
+  \\ 
+  \hline
+    Entry Conditions & The operator must be logged into the system and have visualized the list of all cars \\ 
+    \hline
+    Flow of events &
+     \begin{itemize} 
+     
+       \item  An operator taps on the ''OPERATE '' button related to a car which status is ''ASSISTANCE NEEDED'', ''LOW CHARGE'' or ''ACCIDENT''
+       \item After he took care of the issue,  the operator taps on the button ''ISSUE SOLVED'' on the same row of the list, to communicate that the car is now back to its regular functions.
+       \item  The system marks back the car as ''NO ISSUE'' 
        \end {itemize}  \\
     \hline
     Exit conditions & The operator has successfully solved an issue of a car.\\
@@ -980,12 +1109,40 @@ In this paragraph some use cases will be described. These use cases can be deriv
 
 
 
+
+\begin{center}
+    \begin{tabular}{ | l | p{10cm}  |}
+    \hline
+    \textbf{Name} &  \textbf{Operator views information about cars on repair } \\ 
+    \hline
+    
+    Description & An operator visualizes the list of cars that are being taken care of by other operators
+     \\ 
+     \hline
+    Actors & Operator
+  \\ 
+  \hline
+    Entry Conditions & The operator must be logged into the system \\ 
+    \hline
+    Flow of events &
+     \begin{itemize} 
+      \item  The operator clicks on a link ''cars on repair''  from his home page , directly accessible from the login page, and is redirected to a page that shows  table: each row of the table is associated to a car, and it features the position (expressed in terms of latitude and longitude, the status (consisting of  a writing among ', ''ASSISTANCE NEEDED'', ''LOW CHARGE'' and ''ACCIDENT''), the name of the user who is using the car, the ID of the car and the ID of the operator that is taking care of that car. 
+      
+       \end {itemize}  \\
+    \hline
+    Exit conditions & The operator has successfully visualized the list of all issued cars that are being repaired by some other operator.\\
+    \hline
+    Exceptions & None \\
+    \hline
+    \end{tabular}
+\end{center}
+
 \subsection{Activity Diagrams} %ACTIVITY
-\includegraphics[width=13cm, height=20cm]{activity}
+\includegraphics[scale=0.7]{activity}
 \subsection{Class Diagrams} %CLASS 
-\includegraphics[width=13cm, height=20cm]{class}
+\includegraphics[scale=0.3]{FinalClassDiagram}
 \subsection{State Diagrams} %STATE
-\includegraphics[width=13cm, height=10cm]{state}
+\includegraphics[scale=1]{state}
 
 \newpage
 \subsection{Sequence Diagrams} %SEQUENCE
@@ -1298,5 +1455,33 @@ We are thinking about extending  the perimeter of the safe area to the whole reg
 \item Dropbox : to share documents online
 
 \end{itemize}
+
+\subsection{Revision History}
+  \begin{center}
+    \begin{tabular}{ | p{2cm} | p{2cm} |  p{7 cm} | p{4cm} |}
+    \hline
+    \textbf{Version} &  \textbf{Date} & \textbf{Author(s)} & \textbf{Summary}  \\ 
+    \hline
+    
+    1.0 & 11/11/2016 & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & initial release
+     \\ 
+  \hline
+  2.0 & 20/12/2016  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & minor fixes
+  \\
+  \hline
+  
+  3.0 & 05/02/2017  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & more txt assumption, fixed requirements and class diagram
+  \\
+  \hline
+    4.0 & 06/02/2017  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & added new requirements, fixed text assumptions and use case
+  \\
+  \hline
+   5.0 & 07/02/2017  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & new mockups added, fixed UX and BCE diagrams, added more text assumption
+  \\
+  \hline
+  
+    \end{tabular}
+\end{center}
+
 \end{flushleft} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

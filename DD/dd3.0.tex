@@ -21,7 +21,7 @@
 
 \centering{\textbf{\large{Design Document}} }\break \break
 
-\centering{November 11, 2016 }\break
+\centering{December 11, 2016 }\break
 
 
 
@@ -179,6 +179,7 @@ The Power\&Joy has a three tier architecture.
 \item SECOND TIER: consists on a web server and an application server; the web server (Apache HTTP server) processes the HTTP/S requests coming from the clients, elaborates the web pages and generates dynamic contents. The application server contains all the business logics. It receives its inputs from the web server and the on-board computers, and does all the needed computation in order to generate the dynamic pages and  provide them 
 to the clients. It can communicate to the Oracle database. There is a firewall between the web server and the application server.
 \item THIRD TIER:  it consists on the database, which contains all the needed information about users, cars, reservations, operators et al. , which can be accessed by the application server via sql queries. The database has dynamic tables that store the on-going rides and reservations  and other tables to store all past reservations and rides (already ended). This makes it easier to check if a user is currently on a ride or if he has an ongoing reservation, which is crucial in order to let the system work properly.
+There is also a table dedicated to the car currently on repair
 
 
 \end{description}
@@ -219,7 +220,7 @@ The nexus is where the core of the application is allocated, which contains all 
  
 \vspace{0.5cm}
 
-\includegraphics[scale=0.3]{component} 
+\includegraphics[scale=0.3]{FinalComponentView} 
 
 \vspace{0.5cm}
 \begin {itemize}
@@ -537,18 +538,18 @@ We have already done mockups in RASD in section 3.3\break
 The following UX diagrams show the main interactions between the system and the users and operators\break
 
 
-\includegraphics[width=15cm, height=12cm]{UxRegistrationReservation} \break
+\includegraphics[scale=0.3]{FinalUserUx} \break
  
 
 
 
-\includegraphics[width=15cm, height=12cm]{operatorux} 
+\includegraphics[scale=0.5]{FinalOperatorUx} 
 \newpage
 \subsection{BCE diagram}
 The BCE diagram is used to describe how the requests from the users and operators are managed by the application, accordingly to the MVC design pattern
 
 \vspace{1cm}
-\includegraphics[width=15cm, height=12cm]{BCE} 
+\includegraphics[scale=0.3]{FinalBCE} 
 \vspace{1cm}
 \newpage
 
@@ -570,86 +571,142 @@ This section will describe how the application components are linked to the requ
 \item ConnectionController
 \item Database
 \end{itemize}
-\item [G3] The system shall allow users to see the positions of all the available cars on a map
+
+
+\item[G3] The system shall allow users to view the information about the history of rides and reservations they have made
 \begin{itemize}
 \item Reservation Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G4] The system shall allow users to make a reservation for an available car
+
+
+
+
+\item [G4] The system shall allow users to see the positions of all the available cars on a map%G4
 \begin{itemize}
 \item Reservation Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G5] The system shall allow users who reserved a car to cancel the reservation
+
+
+\item [G5] The system shall allow users to make a reservation for an available car
 \begin{itemize}
 \item Reservation Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G6] The system shall allow users to unlock the car they reserved
+
+\item [G6] The system shall allow users who reserved a car to cancel the reservation
+\begin{itemize}
+\item Reservation Controller
+\item Connection Controller
+\item Database
+\end{itemize}
+
+\item [G7] The system shall allow users to unlock the car they reserved
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G7] The system shall allow users to start the ride
+
+
+\item [G8] The system shall allow users to communicate if the car they have reserved is damaged or issues are found 
+\begin{itemize}
+\item Reservation Controller
+\item Connection Controller
+\item Database
+\end{itemize}
+
+
+
+\item [G9] The system shall allow users to start the ride if they do not find any issue on the car they want to ride
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G8] The System shall allow users to make a pit stop of maximum 60 minutes
+
+
+
+\item[G10] The system shall compute and display the shortest path from the user current position to a given location via the on-board computer
+\begin{itemize}
+\item Ride Controller
+\item Connection Controller
+\item Mapping Service
+\end{itemize}
+
+\item [G11] The System shall allow users to make a pit stop of maximum 60 minutes
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
 \item PitStop Controller
 \end{itemize}
-\item [G9] The system shall allow users to end the ride 
+
+
+\item [G12] The system shall compute and display the shortest path from the user?s current position to the nearest available special parking lot, if rqeuested by the user itself
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
+\item Mapping Service
 \end{itemize}
-\item [G10] The system shall allow users to communicate if the car they reserved is damaged or issues are found (e.g. dirt, damages, etc.)
+
+\item [G13] The system shall allow users to report an accident via the on-board computer
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
 \item Issue Manager
 \end{itemize}
-\item [G11] The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which takes care of the payment
+
+\item [G14] The system shall allow users to end the ride 
+\begin{itemize}
+\item Ride Controller
+\item Connection Controller
+\end{itemize}
+
+\item [G15] The system shall compute the price of every ride taking into account discounts and penalties and send it to the system which takes care of the payment
 \begin{itemize}
 \item Ride Controller
 \item Connection Controller
 \item Discounts\&Penalities Manager
 \end{itemize}
-\item [G12] The system shall allow users to report an accident via the on-board computer
+
+
+
+\item [G16] The system shall allow operators to log into a dedicated area .
 \begin{itemize}
-\item Ride Controller
+\item Operator Controller
 \item Connection Controller
-\item Issue Manager
+\item Database
+\end{itemize}
+
+\item [G17] The system shall allow operators to view the updated status and position of every car
+\begin{itemize}
+\item Operator Controller
+\item Connection Controller
+\item Database
 \end{itemize}
 
 
-\item [G13] The system shall allow operators to log into a dedicated area .
+\item [G18] The system shall allow operators to view the cars currently being assisted by other operators on a dedicated list accessible from the operator?s reserved area
 \begin{itemize}
 \item Operator Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G14] The system shall allow operators to view the updated status and position of every car
+
+
+\item [G19] The system shall allow operators to be able to select a car from the list in order to take care of it.
 \begin{itemize}
 \item Operator Controller
 \item Connection Controller
 \item Database
 \end{itemize}
-\item [G15] The system shall allow operators to be able to select a car from the list in order to take care of it.
-\begin{itemize}
-\item Operator Controller
-\item Connection Controller
-\item Database
-\end{itemize}
-\item [G16] The system allow an operator who took care of a car to communicate that the issues are resolved to all the other operators
+
+
+\item [G20] The system allow an operator who took care of a car to communicate that the issues are resolved to all the other operators
 \begin{itemize}
 \item Operator Controller
 \item Connection Controller
@@ -691,7 +748,8 @@ This section will describe how the application components are linked to the requ
 \end{description}
 
 \newpage
-\section{Used Tools} %7) REFERENCES
+\section{References}
+\subsection{Used Tools} %7) REFERENCES
 The tools we used to create this DD document are:
 \begin{itemize}
 
@@ -704,7 +762,27 @@ The tools we used to create this DD document are:
 
 \end{itemize}
 
-
+\subsection{Revision History}
+  \begin{center}
+    \begin{tabular}{ | p{2cm} | p{2cm} |  p{7 cm} | p{4cm} |}
+    \hline
+    \textbf{Version} &  \textbf{Date} & \textbf{Author(s)} & \textbf{Summary}  \\ 
+    \hline
+    
+    1.0 & 11/12/2016 & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & initial release
+     \\ 
+  \hline
+  2.0 & 10/01/2017  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & fixed component view
+  \\
+  \hline
+  
+  3.0 & 07/02/2017  & Joshua Nicolay Ortiz Osorio and Michelangelo Medori & fixed descriptions of sequence diagrams and architecture, fixed requirement traceability,  
+  \\
+  \hline
+ 
+  
+    \end{tabular}
+\end{center}
 
 
 \end{flushleft}
