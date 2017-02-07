@@ -172,10 +172,10 @@ The Power\&Joy has a three tier architecture.
 
 \textbf{Mapping between layers and tiers}
 \begin{description}
-\item PRESENTATION TIER: consists on the web browser, the mobile app and the on-board computers of the cars. These are light clients, which only correspond to the presentation layers. The web browser and mobile app communicate to the web server, sending HTTP/S requests and receiving the HTML, CSS, JAVASCRIPT responses;  they need to get through a firewall in order to enhance security. The on-board computers directly communicate with the application server, since the security is already granted by the card ID recognition, at the moment when the car is unlocked.
-\item APPLICATION TIER: consists on a web server and an application server; the web server (Apache HTTP server) processes the HTTP/S requests coming from the clients, elaborates the web pages and generates dynamic contents. The application server contains all the business logics. It receives its inputs from the web server and the on-board computers, and does all the needed computation in order to generate the dynamic pages and  provide them 
+\item FIRST TIER: consists on the web browser, the mobile app and the on-board computers of the cars. These are light clients, which only correspond to the presentation layers. The web browser and mobile app communicate to the web server, sending HTTP/S requests and receiving the HTML, CSS, JAVASCRIPT responses;  they need to get through a firewall in order to enhance security. The on-board computers directly communicate with the application server, since the security is already granted by the card ID recognition, at the moment when the car is unlocked.
+\item SECOND TIER: consists on a web server and an application server; the web server (Apache HTTP server) processes the HTTP/S requests coming from the clients, elaborates the web pages and generates dynamic contents. The application server contains all the business logics. It receives its inputs from the web server and the on-board computers, and does all the needed computation in order to generate the dynamic pages and  provide them 
 to the clients. It can communicate to the Oracle database. There is a firewall between the web server and the application server.
-\item DATA TIER:  it consists on the database, which contains all the needed information about users, cars, reservations, operators et al. , which can be accessed by the application server via sql queries.
+\item THIRD TIER:  it consists on the database, which contains all the needed information about users, cars, reservations, operators et al. , which can be accessed by the application server via sql queries.
 
 
 \end{description}
@@ -265,7 +265,7 @@ The above diagram shows the actions performed in order to let a user reserve a c
 The user has to be registered and have successfully inserted his credentials to log in. Once he submits them (assuming they have been already checked as valid) , the mobile app sends a request to show the map to localize the cars. This request arrives to the Reservation Controller, that first needs to check if the user has already an ongoing reservation or ride. It interrogates the database, and sets the answer to a value that distinguishes the following three cases:
 \begin{enumerate}
 \item A valid reservation tuple (which means one associated to a reservation which is not expired yet) associated to the user is found; Then answer is set to ''1'', and the user is redirected to the reservation page corresponding to the reservation he already performed
-\item A ride tuple associated to the user is found: this means that the user is already performing a ride; then the answer is set to ''-1'' and an instance of error2 (already on a ride) is showed and the user is not redirected anywhere until the ride ends.
+\item A ride tuple associated to the user is found: this means that the user is already performing a ride; then the answer is set to ''-1'' and an instance of error2 (already on a ride) is showed and the user is redirected to the ride page, where he can see all the information about the ongoing ride (such as lenght, current price, ecc.).
 \item Neither a valid reservation or ride associated to the user is found; then the answer is set to 0, and the mobile app shows the map with the cars . 
 \end{enumerate} 
 The third case is further exploited, in order to show how a user can actually reserve a car; he selects a car, and the app shows the reservation button; the user taps on that button and a request of a new reservation is sent to the reservation controller, which creates a new instance of reservation and updates the database. The user is then redirected to the reservation page, where he can see all the reservation details such as the carID, the timer, the car position ecc.
@@ -697,6 +697,10 @@ The tools we used to create this DD document are:
 \item Latex: for writing the document and generating pdf
 
 \end{itemize}
+
+
+
+
 \end{flushleft}
 
 \end{document}

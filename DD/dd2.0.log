@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  11 DEC 2016 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.28)  14 DEC 2016 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -255,15 +255,15 @@ Overfull \vbox (98.20364pt too high) has occurred while \output is active []
 
 
 [10 <./graficidd/seq1_login.png>] [11]
-<graficidd/seq2_reservation.png, id=52, 1328.965pt x 1516.66624pt>
+<graficidd/seq2_reservation.png, id=52, 1516.66624pt x 1328.965pt>
 File: graficidd/seq2_reservation.png Graphic file (type png)
 
 <use graficidd/seq2_reservation.png>
 Package pdftex.def Info: graficidd/seq2_reservation.png used on input line 260.
 
-(pdftex.def)             Requested size: 398.69258pt x 455.00339pt.
+(pdftex.def)             Requested size: 455.00339pt x 398.69258pt.
 
-Overfull \hbox (53.69258pt too wide) in paragraph at lines 260--261
+Overfull \hbox (110.00339pt too wide) in paragraph at lines 260--261
 [][]  
  []
 
@@ -483,7 +483,7 @@ exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dd2.0.pdf (33 pages, 3125663 bytes).
+Output written on dd2.0.pdf (33 pages, 3122017 bytes).
 PDF statistics:
  148 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
